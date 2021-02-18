@@ -14,7 +14,7 @@ def home(request):
         comuser = Comuser.objects.get(pk=user_id) # user_id를 기본키로 함
 
 
-    return render(request, 'home.html')
+    return render(request, 'index.html')
     #     return HttpResponse(deathuser.username)
 
     # return HttpResponse('Home')
@@ -36,3 +36,4 @@ def login(request):
     else:
         form = LoginForm()
     return render(request, 'login.html', {'form': form})
+
