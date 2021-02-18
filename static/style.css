@@ -1,16 +1,13 @@
-@media (max-width: 1350px) {
-    body {
-        display: none;
-    }
-}
-
-
 body {
     margin: 0;
 }
 
 * {
     box-sizing: border-box;
+}
+
+.test {
+    display: none;
 }
 
 .top-bar {
@@ -261,4 +258,19 @@ body {
 .footer__information__item {
     margin: 0 10px;
     font-size: 12px;
+}
+
+@media only screen and (max-width: 1350px) {
+    .header {
+        display: none;
+    }
+    .main {
+        display: none;
+    }
+    .footer{
+        display: none;
+    }
+    .test {
+        display: block;
+    }
 }
