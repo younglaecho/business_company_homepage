@@ -46,11 +46,13 @@ body {
 }
 
 .fixed-nav__logo{
+    display: flex;
+    align-items: center;
     height:100%;
 }
 
 .logo-image {
-    height:100%;
+    height:130%;
 }
 
 .fixed-nav__items {
