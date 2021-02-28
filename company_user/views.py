@@ -12,6 +12,9 @@ def home(request):
 
 def introduction(request):
     return render(request, 'introduction.html')
+
+def waytocome(request):
+    return render(request, 'waytocome.html')
  
 
 def logout(request):

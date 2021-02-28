@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from company_user.views import home, introduction
+from company_user.views import home, introduction, waytocome
 from board.views import NoticeList,FreeBoardList,ReferenceList
 
 
@@ -24,7 +24,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('com_user/', include('company_user.urls')),
     path('', home),
-    path('introduction/', introduction),
+    path('company/introduction/', introduction),
+    path('company/waytocome/', waytocome),
     path('board/notice/', NoticeList.as_view()),
     path('board/freeboard/', FreeBoardList.as_view()),
     path('board/reference/', ReferenceList.as_view()),

@@ -1,4 +1,4 @@
-{% extends "base.html"%}
+{% extends "base.html" %}
 {% block header %}
 <link rel="stylesheet" href="/static/page.css">
 {% endblock %}
@@ -8,13 +8,12 @@
         <div class="aside__title"> COMPANY </div>
         <hr>
         <ul class="aside__list">
-            <li class="aside__item" onclick="location.href='/board/notice/'"> 공지사항 </li>
-            <li class="aside__item" onclick="location.href='/board/freeboard/'"> 자유게시판 </li> 
-            <li class="aside__item" id="aside__item__clicked"> 자료실 </li> 
+            <li class="aside__item" onclick="location.href='/company/introduction/'"> 인사말 </li>
+            <li id="aside__item__clicked" class="aside__item" onclick="location.href='#'""> 오시는 길 </li> 
         </ul>
     </aside>
     <main class="main">
-        자료실
+        오시는 길
     </main>
 </section>
 {% endblock %}
