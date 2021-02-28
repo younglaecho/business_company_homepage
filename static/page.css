@@ -1,0 +1,43 @@
+.template_section {
+    display: flex;
+    padding: 1% 8%;
+    justify-content: space-between;
+    height:300px;
+}
+
+.aside {    
+    width:20%;
+}
+.aside__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aside__list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    width: 100%;
+    height: 30%;
+    margin: 0;
+    padding: 0;
+}
+
+.aside__item {
+    width: 100%;
+    height: 50% ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid lightgray;
+}
+
+#aside__item__clicked {
+    background-color: rgba(211, 211, 211, 0.37);
+    
+}
+
+.main {
+    width: 70%;
+}

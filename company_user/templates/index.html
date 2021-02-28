@@ -1,103 +1,57 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/static/style.css">
-    <script src="/static/main.js" defer></script>
-</head>
-<body>
-    <span class="test">모바일 버전은 지원 예정입니다.</span>
-    <header class="header">
-        <div class="top-bar">
-            <span class="top-bar__item">Home</span>
-            <span class="top-bar__item top-bar__item-center">Contact</span>
-            <span class="top-bar__item">Admin</span>
+{% extends "base.html" %}
+{% block header %}
+<link rel="stylesheet" href="/static/index.css">
+{% endblock %}
+{% block contents %}
+<main class="main">
+    <section class="main__menu">
+        <div class="main__menu__text">
+            <span class="main__menu__text__item1">(주)해강기술</span>
+            <span class="main__menu__text__item2">해양기술을 선도하는 기업</span>
         </div>
-        <div class="fixed-nav">
-            <div class="fixed-nav__logo">
-                <img class="logo-image" src="/static/img/logo.png" alt="">
+        <div class="main__menu__items">
+            <div class="main__menu__items__item">
+                <div class="main__menu__items__item__image main__menu__image1"></div>
+                <span class="main__menu__items__item__text">
+                    COMPANY
+                </span>
             </div>
-            <div class="fixed-nav__items">
-                <div id="nav_item1" class="fixed-nav__items__item">COMPANY</div>
-                <div id="nav_item2" class="fixed-nav__items__item fixed-nav__items__item-center">BUSINESS</div>
-                <div id="nav_item3" class="fixed-nav__items__item fixed-nav__items__item-center">GALLERY</div>
-                <div id="nav_item4" class="fixed-nav__items__item fixed-nav__items__item-center">Q & A</div>
-                <div id="nav_item5" class="fixed-nav__items__item">BOARD</div>
+            <div class="main__menu__items__item">
+                <div class="main__menu__items__item__image main__menu__image2"></div>
+                <span class="main__menu__items__item__text">
+                    BUSINESS
+                </span>
+                
+            </div>
+            <div class="main__menu__items__item">
+                <div class="main__menu__items__item__image main__menu__image3"></div>
+                <span class="main__menu__items__item__text">
+                    CONTACT US
+                </span>
+                
+            </div>
+            <div class="main__menu__items__item">
+                <div class="main__menu__items__item__image main__menu__image4"></div>
+                <span class="main__menu__items__item__text">
+                    LOCATION
+                </span>
             </div>
         </div>
-    </header>
-    <main class="main">
-        <section class="maim__slide-area">
-            <section class="main__sliding-image"></section>   
-        </section>
-        <section class="main__menu">
-            <div class="main__menu__text">
-                <span class="main__menu__text__item1">(주)해강기술</span>
-                <span class="main__menu__text__item2">해양기술을 선도하는 기업</span>
-            </div>
-            <div class="main__menu__items">
-                <div class="main__menu__items__item">
-                    <div class="main__menu__items__item__image main__menu__image1"></div>
-                    <span class="main__menu__items__item__text">
-                        COMPANY
-                    </span>
-                </div>
-                <div class="main__menu__items__item">
-                    <div class="main__menu__items__item__image main__menu__image2"></div>
-                    <span class="main__menu__items__item__text">
-                        BUSINESS
-                    </span>
-                    
-                </div>
-                <div class="main__menu__items__item">
-                    <div class="main__menu__items__item__image main__menu__image3"></div>
-                    <span class="main__menu__items__item__text">
-                        CONTACT US
-                    </span>
-                    
-                </div>
-                <div class="main__menu__items__item">
-                    <div class="main__menu__items__item__image main__menu__image4"></div>
-                    <span class="main__menu__items__item__text">
-                        LOCATION
-                    </span>
-                </div>
-            </div>
-        </section>
-        <section class="main__information">
-            <section class="main__information-image"></section>   
-        </section>
-        <section class="main__map">
-            <div class="main__map__item">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3171.3703492229106!2d126.95420141572191!3d37.35741287983766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b5de50bbef4b7%3A0x6e3a73ec0be77db6!2z7JeQ7J207IqkIO2VmOydtO2FjO2BrOyLnO2LsCDqtbDtj6w!5e0!3m2!1sen!2skr!4v1613641835051!5m2!1sen!2skr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-            </div>
-            <div class="main__map__textbox">
-                <span class="main__map__text_big">오시는 길</span>
-                <hr>
-                <span class="main__map__text_small">경기도 군포시 당정동 공단로 140번길52</span>
-                <span class="main__map__text_small">전화: 000 - 0000 - 0000</span>
-                <span class="main__map__text_small">팩스: 000 - 0000 - 0000</span>
-            </div>
-        </section>
-    </main>
-    <footer class="footer">
-        <div class="footer__menu">
-            <img src="/static/img/국립해양조사원.png" class="footer__menu__item"></img>
-            <img src="/static/img/기상청.jpg" class="footer__menu__item"></img>
-            <img src="/static/img/한국해양과학기술원.jpg" class="footer__menu__item"></img>
-            <img src="/static/img/해양수산부.jpg" class="footer__menu__item"></img>
-            <img src="/static/img/해양환경공단.png" class="footer__menu__item"></img>
+    </section>
+    <section class="main__information">
+        <section class="main__information-image"></section>   
+    </section>
+    <section class="main__map">
+        <div class="main__map__item">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3171.3703492229106!2d126.95420141572191!3d37.35741287983766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b5de50bbef4b7%3A0x6e3a73ec0be77db6!2z7JeQ7J207IqkIO2VmOydtO2FjO2BrOyLnO2LsCDqtbDtj6w!5e0!3m2!1sen!2skr!4v1613641835051!5m2!1sen!2skr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         </div>
-        <div class="footer__information">
-            <span class="footer__information__item">충청남도 계룡시 신도안2길 31 </span>
-            <span class="footer__information__item footer__information__item-center">전화 : 010-5177-7229  </span>
-            <span class="footer__information__item footer__information__item-center">팩스 : 0000-0000-0000 </span>
-            <span class="footer__information__item footer__information__item-center">사업자 번호 : 1212315645645 </span>
-            <span class="footer__information__item footer__information__item-center">대표 : 조영래 </span>
-            <span class="footer__information__item">tks7205@gmail.com</span>
+        <div class="main__map__textbox">
+            <span class="main__map__text_big">오시는 길</span>
+            <hr>
+            <span class="main__map__text_small">경기도 군포시 당정동 공단로 140번길52</span>
+            <span class="main__map__text_small">전화: 000 - 0000 - 0000</span>
+            <span class="main__map__text_small">팩스: 000 - 0000 - 0000</span>
         </div>
-    </footer>
-</body>
-</html>
+    </section>
+</main>
+{% endblock %}

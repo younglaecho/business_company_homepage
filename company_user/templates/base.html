@@ -1,27 +1,78 @@
-<html>
-
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"> -->
-    <link rel="stylesheet" href="/static/bootstrap.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
-        integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
-        integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous">
-    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(주)해강기술</title>
+    <link rel="stylesheet" href="/static/base.css">
+    <script src="/static/index.js" defer></script>
+    {% block header %}
+    {% endblock %}
 </head>
-
 <body>
-    <div class="container">
-       {% block contents %}
-       {% endblock %}
-    </div>
+    <span class="test">모바일 버전은 지원 예정입니다.</span>
+    <header class="header">
+        <div class="top-bar">
+            <span class="top-bar__item"><a href="/">Home</a></span>
+            <span class="top-bar__item top-bar__item-center"><a href="/contact/">Contact</a></span>
+            <span class="top-bar__item"><a href="/admin/" >Admin</a></span>
+        </div>
+        <div class="fixed-nav">
+            <div class="fixed-nav__logo">
+                <img class="logo-image" src="/static/img/logo.png" alt="">
+            </div>
+            <ul class="fixed-nav__items">
+                <li id="nav_item1" class="fixed-nav__items__item">
+                    <div class="menu">COMPANY</div>
+                    <ul class="fiexed-nav__submenu">
+                        <a href="introduction"><li class="fiexed-nav__submenu__item">인사말</li></a><hr>
+                        <li class="fiexed-nav__submenu__item">오시는 길</li>
+                    </ul>
+                </li>
+                <li id="nav_item2" class="fixed-nav__items__item fixed-nav__items__item-center">
+                    <div class="menu">BUSINESS</div>
+                    <ul class="fiexed-nav__submenu">
+                        <li class="fiexed-nav__submenu__item">사업분야1</li><hr>
+                        <li class="fiexed-nav__submenu__item">사업분야2</li><hr>
+                        <li class="fiexed-nav__submenu__item">사업분야3</li><hr>
+                        <li class="fiexed-nav__submenu__item">사업분야4</li><hr>
+                        <li class="fiexed-nav__submenu__item">사업분야5</li><hr>
+                        <li class="fiexed-nav__submenu__item">사업분야6</li>
+                    </ul>
+                </li>
+                <li id="nav_item4" class="fixed-nav__items__item fixed-nav__items__item-center">Q & A</li>
+                <li id="nav_item5" class="fixed-nav__items__item">
+                    <div class="menu">BOARD</div>
+                    <ul class="fiexed-nav__submenu">
+                        <li class="fiexed-nav__submenu__item">공지사항</li><hr>
+                        <li class="fiexed-nav__submenu__item">자유게시판</li><hr>
+                        <li class="fiexed-nav__submenu__item">자료실</li>
+                    </ul>
+                </li>
+            </ㅕ>
+        </div>
+    </header>
+    <section class="main__slide-area">
+        <section class="main__sliding-image"></section>   
+    </section>
+    {% block contents %}
+    {% endblock %}
+    <footer class="footer">
+        <div class="footer__menu">
+            <img src="/static/img/국립해양조사원.png" class="footer__menu__item"></img>
+            <img src="/static/img/기상청.jpg" class="footer__menu__item"></img>
+            <img src="/static/img/한국해양과학기술원.jpg" class="footer__menu__item"></img>
+            <img src="/static/img/해양수산부.jpg" class="footer__menu__item"></img>
+            <img src="/static/img/해양환경공단.png" class="footer__menu__item"></img>
+        </div>
+        <div class="footer__information">
+            <span class="footer__information__item">충청남도 계룡시 신도안2길 31 </span>
+            <span class="footer__information__item footer__information__item-center">전화 : 010-5177-7229  </span>
+            <span class="footer__information__item footer__information__item-center">팩스 : 0000-0000-0000 </span>
+            <span class="footer__information__item footer__information__item-center">사업자 번호 : 1212315645645 </span>
+            <span class="footer__information__item footer__information__item-center">대표 : 조영래 </span>
+            <span class="footer__information__item">tks7205@gmail.com</span>
+        </div>
+    </footer>
 </body>
-
 </html>

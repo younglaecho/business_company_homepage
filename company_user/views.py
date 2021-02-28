@@ -8,16 +8,11 @@ from .forms import LoginForm
 
 
 def home(request):
-    user_id = request.session.get('user')  # 세션으로부터 가져옴.
-
-    if user_id:
-        comuser = Comuser.objects.get(pk=user_id) # user_id를 기본키로 함
-
-
     return render(request, 'index.html')
-    #     return HttpResponse(deathuser.username)
 
-    # return HttpResponse('Home')
+def introduction(request):
+    return render(request, 'introduction.html')
+ 
 
 def logout(request):
     if request.session.get('user'):
