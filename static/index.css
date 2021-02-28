@@ -113,11 +113,12 @@
 }
 
 .main__map__map__item {
-    
+    width: 50%;
+
 }
 
 .main__map__textbox {
-    width: 300px;
+    width: 30%;
     margin: 70px;
 }
 
