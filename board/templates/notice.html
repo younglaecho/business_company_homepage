@@ -11,7 +11,7 @@
 {% block contents %}
 <section class="template_section">
     <aside class="aside">
-        <div class="aside__title"> COMPANY </div>
+        <div class="aside__title"> BOARD </div>
         <hr>
         <ul class="aside__list">
             <li class="aside__item" id="aside__item__clicked" > 공지사항 </li>
@@ -31,8 +31,8 @@
             </li>
             {% for post in post_list %}
             {% ifequal post.post_type '공지사항' %}
-            <li class="board_list-col">
-                <ul class="board_item-properties">
+            <li class="board_list-col board_list-col-onclick"  onclick="location.href='/board/{{ post.id }}'">
+                <ul class="board_item-properties ">
                     <li class="board_item-property board_item-property-title">{{ post.title }}</li>
                     <li class="board_item-property board_item-property-writer">{{ post.writer }}</li>
                     <li class="board_item-property board_item-property-dttm">{{ post.registered_dttm }}</li>

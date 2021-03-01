@@ -27,12 +27,12 @@ window.addEventListener('scroll', () => {
     } else {
         fixedNav.style.top = 0;
     }
-    if ((window.scrollY + window.innerHeight) > mainMenuItems.getBoundingClientRect().top+100) {
-        mainMenuItems.style.transform = 'translateY(-20px)'
-        mainMenuItems.style.opacity = '1'
-        mainMenuItems.style.transition = 'all ease-in 0.3s';
+    // if ((window.scrollY + window.innerHeight) > mainMenuItems.getBoundingClientRect().top+100) {
+    //     mainMenuItems.style.transform = 'translateY(-20px)'
+    //     mainMenuItems.style.opacity = '1'
+    //     mainMenuItems.style.transition = 'all ease-in 0.3s';
 
-    }
+    // }
 })
 
 // fixedNavItems.addEventListener('mouseover', event => {

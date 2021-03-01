@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import Board
-from django.views.generic import ListView
+from django.views.generic import ListView, DeleteView
 
 # Create your views here.
 
@@ -18,3 +18,8 @@ class ReferenceList(ListView):
     model = Board
     template_name = 'reference.html'
     context_object_name = 'post_list'
+
+class BoardDetail(DeleteView):
+    template_name = "board_detail.html"
+    queryset = Board.objects.all()
+    context_object_name = 'board'
