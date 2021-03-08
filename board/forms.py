@@ -1,5 +1,5 @@
 from django import forms
-from .models import Board
+from .models import Noticeboard, Referenceboard
 
 class BoardForm(forms.Form):
     title = forms.CharField(
@@ -12,11 +12,6 @@ class BoardForm(forms.Form):
         error_messages={
             'required': '내용을 입력해주세요.'
         }, label='상품설명'
-    )
-    post_type = forms.CharField(
-        error_messages={
-            'required': '게시물 종류를 입력해주세요.'
-        }, label='게시물 종류'
     )
 
     # def clean(self):

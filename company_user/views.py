@@ -16,6 +16,17 @@ def introduction(request):
 def waytocome(request):
     return render(request, 'waytocome.html')
  
+def businesCoast(request):
+    return render(request, 'business_coast.html')
+    
+def businessHarbor(request):
+    return render(request, 'business_harbor.html')
+
+def businessMarEnv(request):
+    return render(request, 'business_marenv.html')
+
+def businessMarPhysics(request):
+    return render(request, 'business_marphysics.html')
 
 def logout(request):
     if request.session.get('user'):

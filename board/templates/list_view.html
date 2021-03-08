@@ -1,0 +1,61 @@
+{% extends "base.html"%}
+{% load humanize %}
+
+{% block header %}
+<link rel="stylesheet" href="/static/page.css">
+<link rel="stylesheet" href="/static/board_list.css">
+{% endblock %}
+{% block contents %}
+<section class="template_section">
+    <aside class="aside">
+        <div class="aside__title"> BOARD </div>
+        <hr>
+        <ul class="aside__list">
+        {% block aside %}
+        {% endblock %}
+        </ul>
+    </aside>
+    <main class="main">
+        {% block board_title %}
+        {% endblock %}
+        <ul class="board_list">
+            <li class="board_list-col board_list-title">
+                <ul class="board_item-properties">
+                    <li class="board_item-property board_item-property-number">#</li>
+                    <li class="board_item-property board_item-property-title">제목</li>
+                    <li class="board_item-property board_item-property-writer">글쓴이</li>
+                    <li class="board_item-property board_item-property-dttm">작성시간</li>
+                    <li class="board_item-property board_item-property-hits">조회수</li>
+                </ul>
+            </li>
+            {% for post in post_list %}
+            {% block postlink %}
+            {% endblock %}
+                <ul class="board_item-properties">
+                    <li class="board_item-property board_item-property-number">{{ post.id }}</li>
+                    <li class="board_item-property board_item-property-title">{{ post.title }}</li>
+                    <li class="board_item-property board_item-property-writer">{{ post.writer }}</li>
+                    <li class="board_item-property board_item-property-dttm">{{ post.registered_dttm|date:'Y-m-d H:i' }}</li>
+                    <li class="board_item-property board_item-property-hits">{{ post.post_hit }}</li>
+                </ul>
+            </li>
+            {% endfor %}
+            <div class="pagination">
+                <span class="step-links">
+                    {% if page_obj.has_previous %}
+                        <a href="?page=1">&laquo; first</a>
+                        <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+                    {% endif %}
+                    <span class="current">
+                        Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+                    </span>
+                    {% if page_obj.has_next %}
+                        <a href="?page={{ page_obj.next_page_number }}">next</a>
+                        <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+                    {% endif %}
+                </span>
+            </div>
+        </ul>
+    </main>
+</section>
+{% endblock %}

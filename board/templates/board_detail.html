@@ -11,25 +11,11 @@
         <div class="aside__title"> BOARD </div>
         <hr>
         <ul class="aside__list">
-            {% ifequal board.post_type '공지사항'%}
-            <li class="aside__item" id="aside__item__clicked" > 공지사항 </li>
-            <li class="aside__item" onclick="location.href='/board/freeboard/'"> 자유게시판 </li> 
-            <li class="aside__item" onclick="location.href='/board/reference/'"> 자료실 </li> 
-            {% endifequal %}
-            {% ifequal board.post_type '자유게시판'%}
-            <li class="aside__item" onclick="location.href='/board/notice/'" > 공지사항 </li>
-            <li class="aside__item" id="aside__item__clicked"> 자유게시판 </li> 
-            <li class="aside__item" onclick="location.href='/board/reference/'"> 자료실 </li> 
-            {% endifequal %}
-            {% ifequal board.post_type '자료실'%}
-            <li class="aside__item" onclick="location.href='/board/notice/'" > 공지사항 </li>
-            <li class="aside__item" onclick="location.href='/board/freeboard/'"> 자유게시판 </li> 
-            <li class="aside__item" id="aside__item__clicked" > 자료실 </li> 
-            {% endifequal %}
+            {% block aside %}
+            {% endblock %}
         </ul>
     </aside>
     <main class="main">
-
         <section class="board__information--box">
             <div class="board__information">
                 <div class="board__information__text">제목</div>
@@ -46,18 +32,12 @@
         </section>
 
         <div class="board__contents"> {{ board.contents }}</div>
-        
+
         <div class="board__button">
-            {% ifequal board.post_type '공지사항'%}
-            <a href="/board/notice">목록보기</a>
-            {% endifequal %}
-            {% ifequal board.post_type '자유게시판'%}
-            <a href="/board/freeboard">목록보기</a>
-            {% endifequal %}
-            {% ifequal board.post_type '자료실'%}
-            <a href="/board/reference">목록보기</a>
-            {% endifequal %}
+            {% block backtolist%}
+            {% endblock %}
         </div>
     </main>
 </section>
+{{ board.update_counter }}
 {% endblock %}

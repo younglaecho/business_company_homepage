@@ -1,19 +1,15 @@
-{% extends "base.html" %}
-{% block header %}
-<link rel="stylesheet" href="/static/page.css">
+{% extends "page.html" %}
+
+
+{% block aside %}
+    <div class="aside__title"> COMPANY </div>
+    <hr>
+    <ul class="aside__list">
+        <li class="aside__item" id="aside__item__clicked" > 인사말 </li>
+        <li class="aside__item" onclick="location.href='/company/waytocome/'" > 오시는 길 </li> 
+    </ul>
 {% endblock %}
-{% block contents %}
-<section class="template_section">
-    <aside class="aside">
-        <div class="aside__title"> COMPANY </div>
-        <hr>
-        <ul class="aside__list">
-            <li class="aside__item" id="aside__item__clicked" > 인사말 </li>
-            <li class="aside__item" onclick="location.href='/company/waytocome/'" > 오시는 길 </li> 
-        </ul>
-    </aside>
-    <main class="main">
-        인사말
-    </main>
-</section>
+
+{% block main %}
+    인사말
 {% endblock %}

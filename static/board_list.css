@@ -36,19 +36,25 @@ li {
     padding: 0;
 }
 .board_item-property {
-    width: 33%;
+    /* width: 25%; */
     display: flex;
     justify-content: center;
     align-items: center;
 
 }
 
-.board_item-property-title {
-    width: 30%;
+.board_item-property-number {
+    width: 10%;
 }
 .board_item-property-title {
     width: 40%;
 }
-.board_item-property-title {
+.board_item-property-writer {
+    width: 10%;
+}
+.board_item-property-dttm {
     width: 30%;
+}
+.board_item-property-hits {
+    width: 10%;
 }

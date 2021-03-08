@@ -15,8 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from company_user.views import home, introduction, waytocome, login
-from board.views import NoticeList,FreeBoardList,ReferenceList, BoardDetail
+from company_user.views import home, introduction, waytocome, login, businesCoast, businessHarbor, businessMarEnv, businessMarPhysics
+from board.views import NoticeList,ReferenceList, NoticeboardDetail, ReferenceboardDetail
 
 
 
@@ -27,8 +27,12 @@ urlpatterns = [
     path('login/', login),
     path('company/introduction/', introduction),
     path('company/waytocome/', waytocome),
+    path('business/coast/', businesCoast),
+    path('business/harbor/', businessHarbor),
+    path('business/marineenvironment/', businessMarEnv),
+    path('business/marinephysics/', businessMarPhysics),
     path('board/notice/', NoticeList.as_view()),
-    path('board/<int:pk>/', BoardDetail.as_view()),
-    path('board/freeboard/', FreeBoardList.as_view()),
+    path('board/notice/<int:pk>/', NoticeboardDetail.as_view()),
+    path('board/reference/<int:pk>/', ReferenceboardDetail.as_view()),
     path('board/reference/', ReferenceList.as_view()),
 ]

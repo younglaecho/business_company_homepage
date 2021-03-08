@@ -1,0 +1,11 @@
+{% extends "board_detail.html"%}
+
+{% block aside %}
+<li class="aside__item" onclick="location.href='/board/notice/'"  > 공지사항 </li>
+<li class="aside__item" onclick="location.href='/board/reference/'" id="aside__item__clicked"> 자료실 </li>
+{% endblock %}
+
+
+{% block backtolist%}
+<a href="/board/reference">목록보기</a>
+{% endblock %}
