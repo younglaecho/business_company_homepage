@@ -6,41 +6,107 @@ const Body = document.querySelector('body');
 const mainMenuItems = document.querySelector('.main__menu__items')
 
 
-let index = 1
+let index_mainImage = 1
 
-const mainImage = document.querySelector('.main__slide-contents')
 const mainImage1 = document.querySelector('.main__sliding-image1')
 const mainImage2 = document.querySelector('.main__sliding-image2')
 const mainImage3 = document.querySelector('.main__sliding-image3')
 const changeImage = function() {
     // console.log('time')
-    if (index== 1) {
+    if (index_mainImage== 1) {
         mainImage1.style.display = 0
         mainImage2.style.opacity = 1
         mainImage3.style.opacity = 0
     }
-    if (index== 2) {
+    if (index_mainImage== 2) {
         mainImage1.style.opacity = 0
         mainImage2.style.opacity = 0
         mainImage3.style.opacity = 1
     }
-    if (index== 3) {
+    if (index_mainImage== 3) {
         mainImage1.style.opacity = 1
         mainImage2.style.opacity = 0
         mainImage3.style.opacity = 0
-        index = 0
+        index_mainImage = 0
     }
-    // mainImage.style.transform = "translateX("+(-100*index)+"vw)"
+    // mainImage.style.transform = "translateX("+(-100*index_mainImage)+"vw)"
 
-    // if (index==3) {
+    // if (index_mainImage==3) {
     //     mainImage.style.transform = "translateX(0vw)"
-    //     index = 0
+    //     index_mainImage = 0
     // }
-    index = index + 1
+    index_mainImage = index_mainImage + 1
 }
 
 let fadeTime = setInterval(changeImage,5000)
-// let fadeTime = setTimeout(changeImage,1000)
+
+let index_business = 1
+
+const mainButton = document.querySelector('.main__menu__buttonbox')
+const business1 = document.querySelector('.main__menu__items__item1')
+const business2 = document.querySelector('.main__menu__items__item2')
+const business3 = document.querySelector('.main__menu__items__item3')
+const business4 = document.querySelector('.main__menu__items__item4')
+const businessButton1 = document.querySelector('.main__menu__button1')
+const businessButton2 = document.querySelector('.main__menu__button2')
+const businessButton3 = document.querySelector('.main__menu__button3')
+const businessButton4 = document.querySelector('.main__menu__button4')
+
+mainButton.addEventListener('click', event => {
+    console.log(event.target)
+    if (event.target.classList.contains('main__menu__button1')) {
+        business1.style.opacity = 1
+        business2.style.opacity = 0
+        business3.style.opacity = 0
+        business4.style.opacity = 0
+    }
+    if (event.target.classList.contains('main__menu__button2')) {
+        business1.style.opacity = 0
+        business2.style.opacity = 1
+        business3.style.opacity = 0
+        business4.style.opacity = 0
+    }
+    if (event.target.classList.contains('main__menu__button3')) {
+        business1.style.opacity = 0
+        business2.style.opacity = 0
+        business3.style.opacity = 1
+        business4.style.opacity = 0
+    }
+    if (event.target.classList.contains('main__menu__button4')) {
+        business1.style.opacity = 0
+        business2.style.opacity = 0
+        business3.style.opacity = 0
+        business4.style.opacity = 1
+    }
+})
+
+// const changeBusiness = function() {
+//     if (index_business== 1) {
+//         business1.style.opacity = 0
+//         business2.style.opacity = 1
+//         business3.style.opacity = 0
+//         business4.style.opacity = 0
+//     }
+//     if (index_business== 2) {
+//         business1.style.opacity = 0
+//         business2.style.opacity = 0
+//         business3.style.opacity = 0
+//         business4.style.opacity = 1
+//     }
+//     if (index_business== 3) {
+//         business1.style.opacity = 1
+//         business2.style.opacity = 0
+//         business3.style.opacity = 0
+//         business4.style.opacity = 0
+//     }
+//     if (index_business== 4) {
+//         business1.style.opacity = 1
+//         business2.style.opacity = 0
+//         business3.style.opacity = 0
+//         business4.style.opacity = 0
+//     }
+//     index_business = index_business + 1
+// }
 
 // function dropDownMenu (event, index, text) {
 //     const dropDown1 = document.createElement('ul');
@@ -57,6 +123,9 @@ let fadeTime = setInterval(changeImage,5000)
 //         dropDown1 && dropDown1.remove()
 //     });
 // }
+
+
+
 window.addEventListener('scroll', () => {
     // if (window.scrollY==0) {
     //     fixedNav.style.top = 30 +'px';
@@ -69,6 +138,7 @@ window.addEventListener('scroll', () => {
         mainMenuItems.style.transition = 'all ease-in 0.3s';
     }
 })
+
 
 // fixedNavItems.addEventListener('mouseover', event => {
 //     if (event.target.id == 'nav_item1') {
@@ -92,29 +162,30 @@ window.addEventListener('scroll', () => {
 //         dropDownMenu(event, index, innerHTML)
 //     }
 // })
-const scrollUnit = window.innerHeight * 6/ 7
-const toggleButton1 = document.querySelector('.toggle__button1') 
-const toggleButton2 = document.querySelector('.toggle__button2') 
-const toggleButton3 = document.querySelector('.toggle__button3')
 
-toggleButton1.addEventListener('click', () => {
-    window.scrollTo({
-        top:0,
-        behavior: 'smooth'
-    })
-})
+// const scrollUnit = window.innerHeight * 8/9
+// const toggleButton1 = document.querySelector('.toggle__button1') 
+// const toggleButton2 = document.querySelector('.toggle__button2') 
+// const toggleButton3 = document.querySelector('.toggle__button3')
 
-toggleButton2.addEventListener('click', () => {
-    window.scrollTo({
-        top:  scrollUnit,
-        behavior: 'smooth'
-    })
-})
+// toggleButton1.addEventListener('click', () => {
+//     window.scrollTo({
+//         top:0,
+//         behavior: 'smooth'
+//     })
+// })
 
-toggleButton3.addEventListener('click', () => {
-    window.scrollTo({
-        top: scrollUnit*2,
-        behavior: 'smooth'
-    })
-})
+// toggleButton2.addEventListener('click', () => {
+//     window.scrollTo({
+//         top:  scrollUnit,
+//         behavior: 'smooth'
+//     })
+// })
+
+// toggleButton3.addEventListener('click', () => {
+//     window.scrollTo({
+//         top: scrollUnit*2,
+//         behavior: 'smooth'
+//     })
+// })
 
