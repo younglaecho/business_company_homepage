@@ -1,5 +1,5 @@
 from django import forms
-from .models import Noticeboard, Referenceboard
+from .models import Noticeboard, Referenceboard, Comment
 
 class BoardForm(forms.Form):
     title = forms.CharField(
@@ -13,8 +13,15 @@ class BoardForm(forms.Form):
             'required': '내용을 입력해주세요.'
         }, label='상품설명'
     )
+class CommentForm(forms.ModelForm):
+    class Meta:
+        model = Comment
+        fields = ['author','password','content']
+        labels = {
+            'content': '댓글내용',
+        }
 
-    # def clean(self):
+# def clean(self):
     #     cleaned_data = super().clean()
     #     name = cleaned_data.get('name')
     #     price = cleaned_data.get('price')

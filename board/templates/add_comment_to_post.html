@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    {% block content %}
+    <h1>New comment</h1>
+
+    <form method="POST" class="post-form">
+        {% csrf_token %}
+        {% for field in form %}
+        <div class="form-group">
+            <textarea class="form-control" name="{{ field.author }}" placeholder="{{ field.label }}" rows="15"></textarea>
+            <textarea class="form-control" name="{{ field.password }}" placeholder="{{ field.label }}" rows="15"></textarea>
+            <textarea class="form-control" name="{{ field.content }}" placeholder="{{ field.label }}" rows="15"></textarea>
+        </div>        
+        <button type="submit" class="save btn btn-default">Send</button>
+    </form>
+    {% endfor %}
+    {% endblock %}
+</body>
+</html>

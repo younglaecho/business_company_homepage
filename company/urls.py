@@ -35,4 +35,6 @@ urlpatterns = [
     path('board/notice/<int:pk>/', NoticeboardDetail.as_view()),
     path('board/reference/<int:pk>/', ReferenceboardDetail.as_view()),
     path('board/reference/', ReferenceList.as_view()),
+    # path('comment/modify/question/<int:comment_id>/', comment_modify_question, name='comment_modify_question'),
+    # path('comment/delete/question/<int:comment_id>/', comment_delete_question, name='comment_delete_question'),
 ]

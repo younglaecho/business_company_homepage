@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import Noticeboard, Referenceboard
+from .models import Noticeboard, Referenceboard, Comment
 # Register your models here.
 
 class BoardAdmin(admin.ModelAdmin):
@@ -10,3 +10,8 @@ class BoardAdmin(admin.ModelAdmin):
 
 admin.site.register(Noticeboard, BoardAdmin)
 admin.site.register(Referenceboard, BoardAdmin)
+
+class CommentAdmin(admin.ModelAdmin):
+    list_display = ('author', 'created_date')
+
+admin.site.register(Comment, CommentAdmin)

@@ -28,6 +28,8 @@ hr {
     justify-content: flex-end;
     align-items: center;
     background-color: #262626;
+    z-index: 100;
+
 }
 
 .top-bar__item {
@@ -52,6 +54,8 @@ hr {
     left: 0;
     top: 30px;
     transition: top ease-in 0.2s;
+    z-index: 100;
+
 }
 
 .fixed-nav__logo{
@@ -88,7 +92,7 @@ hr {
     margin: 0;
     padding: 0;
     height: 30px;
-    font-size: 20px;
+    font-size: 1.1rem;
     list-style-type: none; 
 }
 .menu {
@@ -144,6 +148,7 @@ hr {
     width: calc(100vw-(100vw - 100%));
     height: 450px;
 }
+
 .main__sliding-image_base {
     position: relative;
     z-index: -1;
@@ -155,34 +160,39 @@ hr {
 .footer {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    height: 20%;
+    height: 5vh;
     background-color: #262626;
     color: white;
+}
+
+.main__organization {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.main__organization-item {
+    width: 15%;
 }
 
 .footer__menu {
     display: flex;
     justify-content: center;
     align-items: center;
-    width:75%;
+    width:100%;
     height: 40%;
-    margin: auto;
+    margin: 0 auto;
     padding: 0 10%;
-
-}
-
-.footer__menu__item {
-    width: auto;
-    height: 50px;
-    margin: 0 0.5%;
-    border: 1px solid black;
     background-color: white;
+
 }
 
-.footer__information {
-    margin: auto;
-}
 
 .footer__information__item {
     margin: 0 10px;

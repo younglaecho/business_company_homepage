@@ -51,3 +51,28 @@ class Referenceboard(models.Model):
     def update_counter(self):
         self.post_hit += 1
         self.save()
+
+class Comment(models.Model):
+    author = models.CharField(max_length=128,
+                             verbose_name='작성자')
+    password = models.CharField(max_length=128,
+                                verbose_name='비밀번호')
+    content = models.TextField(verbose_name='내용')
+    created_date = models.DateTimeField()
+    notice_comment = models.ForeignKey(Noticeboard, 
+                                       related_name='comments',
+                                       null=True,
+                                       blank=True, 
+                                       on_delete=models.CASCADE)
+    reference_comment = models.ForeignKey(Referenceboard, 
+                                          null=True,
+                                          blank=True, 
+                                          on_delete=models.CASCADE)
+            
+    def __str__(self):
+        return self.author
+
+    class Meta: # 테이블 이름 정하기
+        db_table = 'com_comment'
+        verbose_name = '게시판 댓글'
+        verbose_name_plural = '게시판 댓글'
