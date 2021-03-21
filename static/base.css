@@ -236,6 +236,12 @@ hr {
         width: 20%;
         font-size: 1.5vh;
     }
+    .main__organization {
+        display: none;
+    }
+    .footer__information__item {
+        font-size: 0.5rem;
+    }
 }
 @media all and (min-width:728px) and (max-width:1024px) {
     .fixed-nav {
