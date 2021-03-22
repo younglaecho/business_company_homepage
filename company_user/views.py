@@ -30,6 +30,10 @@ def businessMarPhysics(request):
 
 def businessGIS(request):
     return render(request, 'business_gis.html')
+
+
+def recruit(request):
+    return render(request, 'recruit.html')
     
 def logout(request):
     if request.session.get('user'):
