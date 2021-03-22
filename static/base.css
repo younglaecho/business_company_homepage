@@ -97,6 +97,7 @@ hr {
 }
 .menu {
     position: absolute;
+    cursor: pointer;
 }
 .fixed-nav__items__item:hover .fiexed-nav__submenu{
     visibility:visible;
@@ -216,7 +217,7 @@ hr {
     }
 
     .fixed-nav__logo{
-        display:  none;
+        display: none;
     }
 
     .logo-image {
