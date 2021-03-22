@@ -28,6 +28,9 @@ def businessMarEnv(request):
 def businessMarPhysics(request):
     return render(request, 'business_marphysics.html')
 
+def businessGIS(request):
+    return render(request, 'business_gis.html')
+    
 def logout(request):
     if request.session.get('user'):
         del(request.session['user'])

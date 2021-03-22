@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from company_user.views import home, introduction, waytocome, login, businesCoast, businessHarbor, businessMarEnv, businessMarPhysics
+from company_user.views import home, introduction, waytocome, login, businesCoast, businessHarbor, businessMarEnv, businessMarPhysics,businessGIS
 from board.views import NoticeList,ReferenceList, NoticeboardDetail, ReferenceboardDetail
 
 
@@ -31,6 +31,7 @@ urlpatterns = [
     path('business/harbor/', businessHarbor),
     path('business/marineenvironment/', businessMarEnv),
     path('business/marinephysics/', businessMarPhysics),
+    path('business/gis/', businessGIS),
     path('board/notice/', NoticeList.as_view()),
     path('board/notice/<int:pk>/', NoticeboardDetail.as_view()),
     path('board/reference/<int:pk>/', ReferenceboardDetail.as_view()),

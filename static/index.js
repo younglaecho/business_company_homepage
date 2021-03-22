@@ -40,17 +40,17 @@ const changeImage = function() {
 
 let fadeTime = setInterval(changeImage,5000)
 
-let index_business = 1
-
 const mainButton = document.querySelector('.main__menu__buttonbox')
 const business1 = document.querySelector('.main__menu__items__item1')
 const business2 = document.querySelector('.main__menu__items__item2')
 const business3 = document.querySelector('.main__menu__items__item3')
 const business4 = document.querySelector('.main__menu__items__item4')
+const business5 = document.querySelector('.main__menu__items__item5')
 const businessButton1 = document.querySelector('.main__menu__button1')
 const businessButton2 = document.querySelector('.main__menu__button2')
 const businessButton3 = document.querySelector('.main__menu__button3')
 const businessButton4 = document.querySelector('.main__menu__button4')
+const businessButton5 = document.querySelector('.main__menu__button5')
 
 mainButton.addEventListener('click', event => {
     console.log(event.target)
@@ -59,24 +59,39 @@ mainButton.addEventListener('click', event => {
         business2.style.opacity = 0
         business3.style.opacity = 0
         business4.style.opacity = 0
+        business5.style.opacity = 0
     }
     if (event.target.classList.contains('main__menu__button2')) {
         business1.style.opacity = 0
         business2.style.opacity = 1
         business3.style.opacity = 0
         business4.style.opacity = 0
+        business5.style.opacity = 0
+
     }
     if (event.target.classList.contains('main__menu__button3')) {
         business1.style.opacity = 0
         business2.style.opacity = 0
         business3.style.opacity = 1
         business4.style.opacity = 0
+        business5.style.opacity = 0
+
     }
     if (event.target.classList.contains('main__menu__button4')) {
         business1.style.opacity = 0
         business2.style.opacity = 0
         business3.style.opacity = 0
         business4.style.opacity = 1
+        business5.style.opacity = 0
+
+    }
+    if (event.target.classList.contains('main__menu__button5')) {
+        business1.style.opacity = 0
+        business2.style.opacity = 0
+        business3.style.opacity = 0
+        business4.style.opacity = 0
+        business5.style.opacity = 1
+
     }
 })
 

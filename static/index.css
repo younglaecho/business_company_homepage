@@ -81,7 +81,7 @@
     align-items: center;
     height: 5vh;
     padding: 0 20px;
-    font-size: 5vh;
+    font-size: 4vh;
     border-right: rgba(221, 221, 221, 0.5) 1px solid;
     
 }
@@ -91,7 +91,7 @@
     align-items: center;
     height: 5vh;
     padding: 0 20px;
-    font-size: 4vh;
+    font-size: 3vh;
 }
 
 .main__menu__items {
@@ -166,6 +166,10 @@
 .main__menu__image4 {
     background-image: url('img/연안개발.jpg');
 }
+.main__menu__image5 {
+    background-image: url('img/GIS.jpeg');
+}
+
 
 .main__menu__buttonbox {
     display: flex;
@@ -177,7 +181,7 @@
 }
 
 .main__menu__button {
-    width: 20%;
+    width: 15%;
     height: 20px;
     color: lightgray;
     transition:  ease-in 0.5s;
@@ -266,6 +270,10 @@
     }
     .main__menu {
         height: 55vh;
+
+    }.main__menu__items {
+        opacity: 1;
+        transform: translateY(20px);
     }
     .main__menu__text__item1 {
         font-size: 1.3rem;
@@ -277,6 +285,7 @@
     .main__menu__items__item {
         width: 100%; /**/
     }
+
 
 
     .main__menu__items__item__text {
@@ -302,7 +311,7 @@
     }
 
     .main__menu__button {
-        width: 20%;
+        width: 15%;
         font-size: 0.7rem;
     }
 
