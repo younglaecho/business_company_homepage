@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% block header %}
 <link rel="stylesheet" href="/static/page.css">
+<link rel="stylesheet" href="/static/recruit.css">
+
 <style>
     .aside {
         display: none;
@@ -19,31 +21,59 @@
     <main class="main">
         {% block main %}
         {% endblock %}
-        정규직 채용 절차
-        서류전형 - 1차면접 - 최종합격
-
-        채용정보 : 해양사업부
-        해양/기상 수치모델 관련 전공자 모집
-
-        자격요건
-        - 학력 : 대졸(4년제) 이상
-
-        담당업무
-        - 수치모델/인공지능/R&D 
-
-        우대사항
-        - 전공분야(해양학, 해양공학, 토목공학, 지리 정보공학 등)
-        - 관련자격증(해양환경기사, 해양공학기사, 기상기사 등) 소지자
-        - 수치모델링 분야 경력자
-        - 석/박사 학위 소지자
-        - 프로그래밍 능숙자(Fortran, Python 등)
-
-        접수기간 : 제한없음(상시 채용)
-        제출서류 : 이력서, 자기소개서, 학위증명서, 성적증명서
-        서류 제출처(우편, 팩스, 이메일 접수)
-        - 주소 :  (15847) 경기도 군포시 공단로 140번길52, 군포에이스하이테크시티, 905호
-        - 연락처 : 070-4455-8748 / Fax : 031-478-8180
-        - 이메일 : sj_0827@hanmail.net
+        <div class="recruitpage-item">
+            <div class="recruitpage-title">
+                채용정보
+            </div>
+            <div class="recruitpage-content">
+                <div class="recruitpage-content-list-title"> 담당업무 </div>
+                <ul class="recruitpage-content-list">
+                    <li class="recruitpage-content-list-item">부서 : 해양사업부</li>
+                    <li class="recruitpage-content-list-item">업무 : 수치모델/인공지능/R&D </li>
+                </ul>
+                <hr class="recruitpage-contentline">
+                <div class="recruitpage-content-list-title"> 지원자격 </div>
+                <ul class="recruitpage-content-list">
+                    <li class="recruitpage-content-list-item">해양/기상 수치모델 관련 전공자</li>
+                    <li class="recruitpage-content-list-item">대졸(4년제) 이상</li>
+                </ul>
+                <hr class="recruitpage-contentline">
+                <div class="recruitpage-content-list-title"> 우대사항 </div>
+                <ul class="recruitpage-content-list">
+                    <li class="recruitpage-content-list-item">전공분야(해양학, 해양공학, 토목공학, 지리 정보공학 등)</li>
+                    <li class="recruitpage-content-list-item">관련자격증(해양환경기사, 해양공학기사, 기상기사 등) 소지자</li>
+                    <li class="recruitpage-content-list-item">수치모델링 분야 경력자</li>
+                    <li class="recruitpage-content-list-item">석/박사 학위 소지자</li>
+                    <li class="recruitpage-content-list-item">프로그래밍 능숙자(Fortran, Python 등)</li>
+                </ul>
+            </div>
+        </div>
+        <div class="recruitpage-item">
+            <div class="recruitpage-title">
+                접수
+            </div>
+            <div class="recruitpage-content">
+                <div class="recruitpage-content-list-title"> 접수기간 </div>
+                <ul class="recruitpage-content-list">
+                    <li class="recruitpage-content-list-item">상시채용</li>
+                </ul>
+                <hr class="recruitpage-contentline">
+                <div class="recruitpage-content-list-title"> 제출서류 </div>
+                <ul class="recruitpage-content-list">
+                    <li class="recruitpage-content-list-item">이력서</li>
+                    <li class="recruitpage-content-list-item">자기소개서</li>
+                    <li class="recruitpage-content-list-item">학위증명서</li>
+                    <li class="recruitpage-content-list-item">성적증명서</li>
+                </ul>
+                <hr class="recruitpage-contentline">
+                <div class="recruitpage-content-list-title"> 제출방법 </div>
+                <ul class="recruitpage-content-list">
+                    <li class="recruitpage-content-list-item">우편</li>
+                    <li class="recruitpage-content-list-item">팩스</li>
+                    <li class="recruitpage-content-list-item">이메일</li>
+                </ul>
+            </div>
+        </div>
     </main>
 </section>
 {% endblock %}
