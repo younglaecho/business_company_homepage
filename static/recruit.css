@@ -14,6 +14,7 @@
     align-items: flex-start;
     width: 100%;
     height: 50%;
+    padding: 0 10vh;
 }
 
 .recruitpage-title {
@@ -22,6 +23,8 @@
     align-items: center;
     width: 25%;
     height: 30%;
+    max-width: 220px;
+    max-height: 120px;
     padding-right: 5%;
     font-size: 2rem;
     -webkit-box-shadow: 17px 17px 58px -25px rgba(0,0,0,0.37);
@@ -30,7 +33,7 @@
 }
 
 .recruitpage-content {
-    width: 60%;
+    width: 70%;
     padding-top: 5%;
 }
 .recruitpage-content-list {

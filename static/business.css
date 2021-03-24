@@ -1,0 +1,91 @@
+.template_section {
+    height: fit-content;
+}
+.business-title {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 20vw;
+    height: 8vh;
+    max-width: 250px;
+    max-height: 80px;
+    padding-right: 4vw;
+    font-size: 1.5rem;
+
+    -webkit-box-shadow: 5px 5px 8px 2px rgba(0,0,0,0.43);
+    -moz-box-shadow: 5px 5px 8px 2px rgba(0,0,0,0.43);
+    box-shadow: 5px 5px 8px 2px rgba(0,0,0,0.43);
+}
+
+.business-content {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.business-content__textbox {
+    width: 100%;
+}
+
+.business-content__item {
+    width:100%; 
+    margin-bottom: 5vh;
+}
+.business-content__item-title {
+    width:100%;
+    padding-left: 2vw;
+    font-size: 1.5rem;
+}
+
+.business-content__item-imagebox {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 45vh;
+}
+
+.business-content__item-image {
+    width: 40vh;
+    height: 40vh;
+    margin-top: 3vh;
+    border: 1px solid lightgray;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+}
+
+#business__coast__stormimage1 {
+    background-image: url(img/business_coast/폭풍해일실험_그림.jpg);
+
+}
+#business__coast__stormimage2{
+    background-image: url(img/business_coast/폭풍해일실험_태풍.jpg);
+
+}
+#business__coast__stormimage2{
+    background-image: url(img/business_coast/폭풍해일실험_태풍.jpg);
+
+}
+#business__coast__earthquake1{
+    background-image: url(img/business_coast/지진해일실험_그림.jpg);
+
+}
+#business__coast__earthquake2{
+    background-image: url(img/business_coast/지진해일실험_지진.jpg);
+
+}
+#business__coast__coastimage1{
+    background-image: url(img/business_coast/해안선변형실험_그림1.JPG);
+
+}
+#business__coast__coastimage2{
+    background-image: url(img/business_coast/해안선변형실험_그림2.JPG);
+
+}
+#business__coast__onbaesuimage1{
+    background-image: url(img/business_coast/온배수확산실험_그림1.jpg);
+}
+#business__coast__onbaesuimage2{
+    background-image: url(img/business_coast/온배수확산실험_그림2.jpg);
+}

@@ -1,19 +1,54 @@
-{% extends "page.html" %}
+{% extends "business.html" %}
 {% block aside %}
-<div class="aside__title"> BUSINESS </div>
-<hr>
+<div class="aside__title"> 연구사업소개 </div>
+<div class="aside__title-samll">business info</div><hr>
 <ul class="aside__list">
     <li id="aside__item__clicked" class="aside__item" onclick="location.href='/business/coast/'"> 연안개발 </li>
     <li class="aside__item" onclick="location.href='/business/harbor/'"> 항만개발 </li>
     <li class="aside__item" onclick="location.href='/business/marinephysics/'"> 해양물리 </li>
     <li class="aside__item" onclick="location.href='/business/marineenvironment/'"> 해양환경 </li>
     <li class="aside__item" onclick="location.href='/business/gis/'"> GIS </li>
-
 </ul>
 {% endblock %}
 {% block main %}
-연안개발
-<section class="main__map">
-    
-</section>
+<div class="business-title">연안개발</div>
+<div class="business-content">
+    <div class="business-content__textbox">
+        <ul class="business-content__textlist">
+            <li class="business-content__text">연안환경피해 최소화를 위한 온배수확산 영향평가</li>
+            <li class="business-content__text">연안지역 해일내습 위험도 분석</li>
+            <li class="business-content__text">연안복원을 위한 해안선변화 이력검토 및 예측</li>
+        </ul>
+    </div>
+    <div class="business-content__item">
+        <div class="business-content__item-title">- 폭풍해일실험</div>
+        <div class="business-content__item-imagebox">
+            <div id="business__coast__stormimage1" class="business-content__item-image"></div>
+            <div id="business__coast__stormimage2" class="business-content__item-image"></div>
+        </div>
+    </div>
+    <div class="business-content__item">
+        <div class="business-content__item-title">- 지진해일실험</div>
+        <div class="business-content__item-imagebox">
+            <div id="business__coast__earthquake1" class="business-content__item-image"></div>
+            <div id="business__coast__earthquake2" class="business-content__item-image"></div>
+            
+        </div>
+    </div>
+    <div class="business-content__item">
+        <div class="business-content__item-title">- 해안선변형실험</div>
+        <div class="business-content__item-imagebox">
+            <div id="business__coast__coastimage1" class="business-content__item-image"></div>
+            <div id="business__coast__coastimage2" class="business-content__item-image"></div>
+        </div>
+    </div>
+    <div class="business-content__item">
+        <div class="business-content__item-title">- 온배수확산실험</div>
+        <div class="business-content__item-imagebox">
+            <div id="business__coast__onbaesuimage1" class="business-content__item-image"></div>
+            <div id="business__coast__onbaesuimage2" class="business-content__item-image"></div>
+        </div>
+    </div>
+</div>
+
 {% endblock %}

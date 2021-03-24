@@ -14,8 +14,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 1.5rem;
 }
 
+.aside__title-samll {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 0.5rem;
+    color: lightskyblue;
+}
 .aside__list {
     display: flex;
     flex-wrap: wrap;
