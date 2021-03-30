@@ -191,6 +191,7 @@
     color: rgb(155, 155, 155);
     transition:  ease-in 0.5s;
     position: relative;
+    font-size: 1.2rem;
 
 }
 
@@ -227,7 +228,8 @@
 
 .main__map__item {
     max-width: 50vh;
-    width: 50%;
+    width: 50vh;
+    height: 50vh;
 
 }
 .main__map__iframe {
@@ -313,6 +315,8 @@
 
     .main__menu__buttonbox {
         padding: 0 5vh;
+        transform: translateY(-5vh);
+
     }
 
     .main__menu__button {

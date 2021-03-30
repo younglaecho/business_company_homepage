@@ -48,7 +48,7 @@
     width: 40vh;
     height: 40vh;
     margin-top: 3vh;
-    border: 1px solid lightgray;
+    /* border: 1px solid lightgray; */
     background-size: contain;
     background-repeat: no-repeat;
     background-position-x: center;
@@ -56,7 +56,7 @@
 }
 
 #business__coast__stormimage1 {
-    background-image: url(img/business_coast/폭풍해일실험_그림.jpg);
+    background-image: url("img/business_coast/폭풍해일실험_그림.jpg");
 
 }
 #business__coast__stormimage2{

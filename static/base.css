@@ -181,11 +181,16 @@ hr {
 }
 
 .main__sliding-image_base {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     z-index: -1;
     height: 40vh;
     background-image: url(img/sea.jpg) ;
     background-size: cover;
+    color: blanchedalmond;
+    font-size: 1.8rem;
 }
 
 
