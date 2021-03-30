@@ -1,8 +1,9 @@
 {% extends "base.html" %}
+
+
 {% block header %}
 <link rel="stylesheet" href="/static/page.css">
-<link rel="stylesheet" href="/static/recruit.css">
-
+<link rel="stylesheet" href="/static/qanda.css">
 <style>
     .aside {
         display: none;
@@ -12,79 +13,103 @@
     }
 </style>
 {% endblock %}
+{% block pagetitle %}
+<div class="page-title">문의사항</div>
+{% endblock %}
 {% block contents %}
 <section class="template_section">
-    <form method="POST">
-        {% csrf_token %}
-        <div> 
-            <label for="{{ form.writer.id_for_label }}"> {{ form.writer.label }}</label>
-            <input type="{{ form.writer.field.widget.input_type }}" name="{{ form.writer.name }}" 
-                        id="{{ form.writer.id_for_label}}" >
-        </div>
-        {% if form.writer.errors %}
-            <span style="color: red;"> {{ form.writer.errors }}</span>
-        {% endif %}
-        <div> 
-            <label for="{{ form.company.id_for_label }}"> {{ form.company.label }}</label>
-            <input type="{{ form.company.field.widget.input_type }}" name="{{ form.company.name }}" 
-                        id="{{ form.company.id_for_label}}" >
-        </div>
-        {% if form.company.errors %}
-            <span style="color: red;"> {{ form.company.errors }}</span>
-        {% endif %}
-        <div> 
-            <label for="{{ form.email_user.id_for_label }}"> {{ form.email_user.label }}</label>
-            <input type="{{ form.email_user.field.widget.input_type }}" name="{{ form.email_user.name }}" 
-                        id="{{ form.email_user.id_for_label}}" >@
-            <input type="{{ form.email_site.field.widget.input_type }}" name="{{ form.email_site.name }}" 
-                        id="{{ form.email_site.id_for_label}}" >
-        </div>
-        {% if form.email_user.errors %}
-            <span style="color: red;"> {{ form.email_user.errors }}</span>
-        {% endif %}
-        <div> 
-            <label for="{{ form.phone_first.id_for_label }}"> {{ form.phone_first.label }}</label>
-            <input type="{{ form.phone_first.field.widget.input_type }}" name="{{ form.phone_first.name }}"
-                        id="{{ form.phone_first.id_for_label}}" >-
-            <input type="{{ form.phone_middle.field.widget.input_type }}" name="{{ form.phone_middle.name }}"
-                        id="{{ form.phone_middle.id_for_label}}" >-
-            <input type="{{ form.phone_last.field.widget.input_type }}" name="{{ form.phone_last.name }}"
-                        id="{{ form.phone_last.id_for_label}}" >
-        </div>
-        {% if form.phone_first.errors %}
-            <span style="color: red;"> {{ form.phone_first.errors }}</span>
-        {% elif form.phone_second.errors %}
-            <span style="color: red;"> {{ form.phone_second.errors }}</span>
-        {% elif form.phone_third.errors %}
-            <span style="color: red;"> {{ form.phone_third.errors }}</span>
-        {% endif %}
-        <div> 
-            <label for="{{ form.fax_first.id_for_label }}"> {{ form.fax_first.label }}</label>
-            <input type="{{ form.fax_first.field.widget.input_type }}" name="{{ form.fax_first.name }}"
-                        id="{{ form.fax_first.id_for_label}}" >-
-            <input type="{{ form.fax_middle.field.widget.input_type }}" name="{{ form.fax_middle.name }}"
-                        id="{{ form.fax_middle.id_for_label}}" >-
-            <input type="{{ form.fax_last.field.widget.input_type }}" name="{{ form.fax_last.name }}"
-                        id="{{ form.fax_last.id_for_label}}" >
-        </div>
-        <div> 
-            <label for="{{ form.title.id_for_label }}"> {{ form.title.label }}</label>
-            <input type="{{ form.title.field.widget.input_type }}" name="{{ form.title.name }}" 
-                        id="{{ form.title.id_for_label}}" >
-        </div>
-        {% if form.title.errors %}
-            <span style="color: red;"> {{ form.title.errors }}</span>
-        {% endif %}
-        <div>
-            <label for="{{ form.content.id_for_label }}"> {{ form.content.label }}</label>
-            <textarea class="form-control" name="{{ form.content.name }}" placeholder="{{ form.content.label }}" rows="15"></textarea>
-        </div>
-        {% if form.content.errors %}
-            <span style="color: red;"> {{ form.content.errors }}</span>
-        {% endif %}
+    <form class="qnada-form" method="POST">
+        <div class="qanda-formbox">
 
-        <button type="submit" class="btn btn-primary">글쓰기</button>
+            {% csrf_token %}
+            <div class="qanda-form__item"> 
+                <div class="qanda-form__label"> {{ form.writer.label }}</div>
+                <div class="qanda-form__inputbox">
+                    <input class="qanda-form__input" type="{{ form.writer.field.widget.input_type }}" name="{{ form.writer.name }}" 
+                                id="{{ form.writer.id_for_label}}" >
 
-    </form>
+                </div>
+            </div>
+            {% if form.writer.errors %}
+                <span style="color: red;"> {{ form.writer.errors }}</span>
+            {% endif %}
+            <div class="qanda-form__item"> 
+                <div class="qanda-form__label"> {{ form.company.label }}</div>
+                <div class="qanda-form__inputbox">
+
+                    <input type="{{ form.company.field.widget.input_type }}" name="{{ form.company.name }}" 
+                                id="{{ form.company.id_for_label}}" >
+                </div>
+            </div>
+            {% if form.company.errors %}
+                <span style="color: red;"> {{ form.company.errors }}</span>
+            {% endif %}
+            <div class="qanda-form__item"> 
+                <div class="qanda-form__label"> {{ form.email_user.label }}</div>
+                <div class="qanda-form__inputbox">
+                    <input type="{{ form.email_user.field.widget.input_type }}" name="{{ form.email_user.name }}" 
+                                id="{{ form.email_user.id_for_label}}" >@
+                    <input type="{{ form.email_site.field.widget.input_type }}" name="{{ form.email_site.name }}" 
+                                id="{{ form.email_site.id_for_label}}" >
+                </div>
+            </div>
+            {% if form.email_user.errors %}
+                <span style="color: red;"> {{ form.email_user.errors }}</span>
+            {% endif %}
+            <div class="qanda-form__item"> 
+                <div class="qanda-form__label"> {{ form.phone_first.label }}</div>
+                <div class="qanda-form__inputbox">
+                    <input type="{{ form.phone_first.field.widget.input_type }}" name="{{ form.phone_first.name }}"
+                                id="{{ form.phone_first.id_for_label}}" >-
+                    <input type="{{ form.phone_middle.field.widget.input_type }}" name="{{ form.phone_middle.name }}"
+                                id="{{ form.phone_middle.id_for_label}}" >-
+                    <input type="{{ form.phone_last.field.widget.input_type }}" name="{{ form.phone_last.name }}"
+                                id="{{ form.phone_last.id_for_label}}" >
+                </div>
+            </div>
+            {% if form.phone_first.errors %}
+                <span style="color: red;"> {{ form.phone_first.errors }}</span>
+            {% elif form.phone_second.errors %}
+                <span style="color: red;"> {{ form.phone_second.errors }}</span>
+            {% elif form.phone_third.errors %}
+                <span style="color: red;"> {{ form.phone_third.errors }}</span>
+            {% endif %}
+            <div class="qanda-form__item"> 
+                <div class="qanda-form__label"> {{ form.fax_first.label }}</div>
+                <div class="qanda-form__inputbox">
+
+                    <input type="{{ form.fax_first.field.widget.input_type }}" name="{{ form.fax_first.name }}"
+                                id="{{ form.fax_first.id_for_label}}" >-
+                    <input type="{{ form.fax_middle.field.widget.input_type }}" name="{{ form.fax_middle.name }}"
+                                id="{{ form.fax_middle.id_for_label}}" >-
+                    <input type="{{ form.fax_last.field.widget.input_type }}" name="{{ form.fax_last.name }}"
+                                id="{{ form.fax_last.id_for_label}}" >
+                </div>
+            </div>
+            <div class="qanda-form__item"> 
+                <div class="qanda-form__label"> {{ form.title.label }}</div>
+                <div class="qanda-form__inputbox">
+                    <input type="{{ form.title.field.widget.input_type }}" name="{{ form.title.name }}" 
+                                id="{{ form.title.id_for_label}}" >
+
+                </div>
+            </div>
+            {% if form.title.errors %}
+                <span style="color: red;"> {{ form.title.errors }}</span>
+            {% endif %}
+            <div class="qanda-form__item">
+                <div class="qanda-form__label"> {{ form.content.label }}</div>
+                <div class="qanda-form__inputbox">
+                    <textarea class="form-control" name="{{ form.content.name }}" placeholder="{{ form.content.label }}" rows="15"></textarea>
+                </div>
+            </div>
+            {% if form.content.errors %}
+                <span style="color: red;"> {{ form.content.errors }}</span>
+            {% endif %}
+    
+            <button type="submit" class="btn btn-primary">글쓰기</button>
+        </div>
+
+    </form>    
 </section>
 {% endblock %}

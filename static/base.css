@@ -143,9 +143,9 @@ hr {
     margin: 0;
     padding: 0;
     transition: opacity ease-in 0.5s, transform ease-in 0.3s;
-    -webkit-box-shadow: -3px 2px 14px -8px rgba(0,0,0,0.75);
-    -moz-box-shadow: -3px 2px 14px -8px rgba(0,0,0,0.75);
-    box-shadow: -3px 2px 14px -8px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 21px -8px rgba(117,117,117,1);
+    -moz-box-shadow: 10px 10px 21px -8px rgba(117,117,117,1);
+    box-shadow: 10px 10px 21px -8px rgba(117,117,117,1);
 }
 
 .fiexed-nav__submenu__item {
@@ -182,6 +182,8 @@ hr {
 
 .main__sliding-image_base {
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     position: relative;
@@ -189,8 +191,7 @@ hr {
     height: 40vh;
     background-image: url(img/sea.jpg) ;
     background-size: cover;
-    color: blanchedalmond;
-    font-size: 1.8rem;
+    color: white;
 }
 
 

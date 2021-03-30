@@ -1,46 +1,53 @@
+.page-title {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.page-subtitle {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 2vh;
+    font-size: 2rem;
+
+
+}
 .template_section {
     display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
     padding: 1% 5%;
     position: relative;
     top: 8vh;
-    height: 90vh;
-    justify-content: space-between;
+    height: auto;
+    justify-content: left;
 }
 
 .aside {    
-    width:20%;
-}
-.aside__title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5rem;
-}
+    width:100%;
+    height: 60px;
+    border-bottom: 1px solid lightgray;
 
-.aside__title-samll {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    font-size: 0.5rem;
-    color: lightskyblue;
 }
 .aside__list {
     display: flex;
     flex-wrap: wrap;
     list-style-type: none;
     width: 100%;
-    height: 80px;
+    height: 60px;
     margin: 0;
     padding: 0;
 }
 
 .aside__item {
-    width: 100%;
-    height: 50% ;
+    width: 20%;
+    height: 100% ;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 1px solid lightgray;
     cursor: pointer;
 }
 
@@ -50,8 +57,8 @@
 }
 
 .main {
-    width: 80%;
-    padding: 0 2%;
+    width: 100%;
+    padding: 5% 10%;
     height: auto;
 }
 

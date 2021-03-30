@@ -1,12 +1,11 @@
 {% extends "list_view.html" %}
-
+{% block pagetitle %}
+<div class="page-title">게시판</div>
+<div class="page-subtitle">자료실</div>
+{% endblock %}
 {% block aside %}
 <li class="aside__item" onclick="location.href='/board/notice/'"> 공지사항 </li>
 <li class="aside__item" onclick="location.href='/board/reference/'"  id="aside__item__clicked" > 자료실 </li>
-{% endblock %}
-
-{% block board_title %}
-자료실
 {% endblock %}
 
 

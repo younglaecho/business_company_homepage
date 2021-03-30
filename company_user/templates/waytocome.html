@@ -1,7 +1,10 @@
 {% extends "page.html" %}
+{% block pagetitle %}
+<div class="page-title">회사소개</div>
+<div class="page-subtitle">오시는 길</div>
+{% endblock %}
+
 {% block aside %}
-<div class="aside__title"> COMPANY </div>
-<hr>
 <ul class="aside__list">
     <li class="aside__item" onclick="location.href='/company/introduction/'"> 인사말 </li>
     <li id="aside__item__clicked" class="aside__item" onclick="location.href='#'""> 오시는 길 </li> 
@@ -15,7 +18,7 @@
     <div class="waytocome__map__textbox">
         <span class="waytocome__map__text_big">오시는 길</span>
         <hr>
-        <span class="waytocome__map__text_small">경기도 군포시 당정동 공단로 140번길52 <br>군포에이스하이테크시티, 905호</span>
+        <span class="waytocome__map__text_small">경기도 군포시 당정동 공단로 140번길52 <br>군포에이스하이테크시티 905호</span>
         <span class="waytocome__map__text_small">전화 : 070 - 4455 - 8748</span>
         <span class="waytocome__map__text_small">팩스 : 031 - 478 - 8180</span>
     </div>

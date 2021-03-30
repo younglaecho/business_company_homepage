@@ -1,7 +1,9 @@
 {% extends "business.html" %}
+{% block pagetitle %}
+<div class="page-title">연구사업소개</div>
+<div class="page-subtitle">연안개발</div>
+{% endblock %}
 {% block aside %}
-<div class="aside__title"> 연구사업소개 </div>
-<div class="aside__title-samll">business info</div><hr>
 <ul class="aside__list">
     <li id="aside__item__clicked" class="aside__item" onclick="location.href='/business/coast/'"> 연안개발 </li>
     <li class="aside__item" onclick="location.href='/business/harbor/'"> 항만개발 </li>
@@ -11,7 +13,6 @@
 </ul>
 {% endblock %}
 {% block main %}
-<div class="business-title">연안개발</div>
 <div class="business-content">
     <div class="business-content__textbox">
         <ul class="business-content__textlist">
@@ -21,14 +22,14 @@
         </ul>
     </div>
     <div class="business-content__item">
-        <div class="business-content__item-title">- 폭풍해일실험</div>
+        <div class="business-content__item-title">폭풍해일실험</div>
         <div class="business-content__item-imagebox">
             <div id="business__coast__stormimage1" class="business-content__item-image"></div>
             <div id="business__coast__stormimage2" class="business-content__item-image"></div>
         </div>
     </div>
     <div class="business-content__item">
-        <div class="business-content__item-title">- 지진해일실험</div>
+        <div class="business-content__item-title">지진해일실험</div>
         <div class="business-content__item-imagebox">
             <div id="business__coast__earthquake1" class="business-content__item-image"></div>
             <div id="business__coast__earthquake2" class="business-content__item-image"></div>
@@ -36,14 +37,14 @@
         </div>
     </div>
     <div class="business-content__item">
-        <div class="business-content__item-title">- 해안선변형실험</div>
+        <div class="business-content__item-title">해안선변형실험</div>
         <div class="business-content__item-imagebox">
             <div id="business__coast__coastimage1" class="business-content__item-image"></div>
             <div id="business__coast__coastimage2" class="business-content__item-image"></div>
         </div>
     </div>
     <div class="business-content__item">
-        <div class="business-content__item-title">- 온배수확산실험</div>
+        <div class="business-content__item-title">온배수확산실험</div>
         <div class="business-content__item-imagebox">
             <div id="business__coast__onbaesuimage1" class="business-content__item-image"></div>
             <div id="business__coast__onbaesuimage2" class="business-content__item-image"></div>

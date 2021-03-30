@@ -1,5 +1,8 @@
 {% extends "board_detail.html"%}
-
+{% block pagetitle %}
+<div class="page-title">게시판</div>
+<div class="page-subtitle">공지사항</div>
+{% endblock %}
 {% block aside %}
 <li class="aside__item" onclick="location.href='/board/notice/'" id="aside__item__clicked""  > 공지사항 </li>
 <li class="aside__item" onclick="location.href='/board/reference/'" > 자료실 </li>
