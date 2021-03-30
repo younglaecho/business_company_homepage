@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from company_user.views import home, introduction, waytocome, login, businesCoast, businessHarbor, businessMarEnv, businessMarPhysics,businessGIS, recruit, qanda
 from board.views import NoticeList,ReferenceList, NoticeboardDetail, ReferenceboardDetail
-
+from QandA.views import QandA_write
 
 
 urlpatterns = [
@@ -32,7 +32,7 @@ urlpatterns = [
     path('business/marineenvironment/', businessMarEnv),
     path('business/marinephysics/', businessMarPhysics),
     path('business/gis/', businessGIS),
-    path('qanda', qanda),   
+    path('qanda/', QandA_write),
     path('board/notice/', NoticeList.as_view()),
     path('board/notice/<int:pk>/', NoticeboardDetail.as_view()),
     path('board/reference/<int:pk>/', ReferenceboardDetail.as_view()),

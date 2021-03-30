@@ -26,7 +26,8 @@
     max-width: 220px;
     max-height: 120px;
     padding-right: 5%;
-    font-size: 2rem;
+    font-size: 1.7rem;
+    font-weight: 600;
     -webkit-box-shadow: 17px 17px 58px -25px rgba(0,0,0,0.37);
     -moz-box-shadow: 17px 17px 58px -25px rgba(0,0,0,0.37);
     box-shadow: 17px 17px 58px -25px rgba(0,0,0,0.37);
@@ -46,6 +47,7 @@
 
 .recruitpage-content-list-title {
     font-size: 1.5rem;
+    font-weight: 400;
 }
 
 .recruitpage-contentline {

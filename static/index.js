@@ -52,7 +52,7 @@ const businessButton3 = document.querySelector('.main__menu__button3')
 const businessButton4 = document.querySelector('.main__menu__button4')
 const businessButton5 = document.querySelector('.main__menu__button5')
 
-mainButton.addEventListener('click', event => {
+mainButton.addEventListener('mouseover', event => {
     console.log(event.target)
     if (event.target.classList.contains('main__menu__button1')) {
         business1.style.opacity = 1

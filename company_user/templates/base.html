@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>(주)해강기술</title>
     <link rel="stylesheet" href="/static/base.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
+
     {% block header %}
     {% endblock %}
 </head>
@@ -22,14 +24,14 @@
             </div>
             <ul class="fixed-nav__items">
                 <li class="fixed-nav__items__item">
-                    <div class="menu">COMPANY</div>
+                    <div onclick="location.href='/company/introduction/'" class="menu">COMPANY</div>
                     <ul class="fiexed-nav__submenu">
                         <a href="/company/introduction/"><li class="fiexed-nav__submenu__item">인사말</li></a><hr>
                         <a href="/company/waytocome/"><li class="fiexed-nav__submenu__item">오시는 길</li></a>
                     </ul>
                 </li>
                 <li class="fixed-nav__items__item fixed-nav__items__item-center">
-                    <div class="menu">BUSINESS</div>
+                    <div onclick="location.href='/business/coast/'" class="menu">BUSINESS</div>
                     <ul class="fiexed-nav__submenu">
                         <li class="fiexed-nav__submenu__item" onclick="location.href='/business/coast/'">연안개발</li><hr>
                         <li class="fiexed-nav__submenu__item" onclick="location.href='/business/harbor/'">항만개발</li><hr>
@@ -42,7 +44,7 @@
                     <div class="menu" onclick="location.href='/qanda'">Q & A</div>
                 </li>
                 <li class="fixed-nav__items__item fixed-nav__items__item-center">
-                    <div class="menu">BOARD</div>
+                    <div onclick="location.href='/board/notice/'" class="menu">BOARD</div>
                     <ul class="fiexed-nav__submenu">
                         <a href="/board/notice/"><li class="fiexed-nav__submenu__item">공지사항</li></a><hr>
                         <a href="/board/reference/"><li class="fiexed-nav__submenu__item">자료실</li></a>
