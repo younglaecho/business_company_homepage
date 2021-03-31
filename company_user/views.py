@@ -34,7 +34,8 @@ def businessGIS(request):
 
 def qanda(request):
     return render(request, 'qanda.html')
-    
+
+
 def recruit(request):
     return render(request, 'recruit.html')
     

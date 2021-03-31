@@ -34,3 +34,7 @@ def QandA_write(request):
     else:
         form = QandAForm()
     return render(request, 'qanda.html', {'form': form})
+
+    
+def personal_info(request):
+    return render(request, '(주)해강기술개인정보처리방침.html')
