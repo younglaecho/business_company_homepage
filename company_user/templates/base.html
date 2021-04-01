@@ -6,7 +6,7 @@
     <title>(주)해강기술</title>
     <link rel="stylesheet" href="/static/base.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
-
+    <script src="/static/base.js"></script>
     {% block header %}
     {% endblock %}
 </head>
@@ -22,16 +22,16 @@
             <div class="fixed-nav__logo">
                 <img class="logo-image" src="/static/img/logo.png" alt="" onclick="location.href='/'">
             </div>
-            <ul class="fixed-nav__items">
+            <ul id="fixed-nav__items" class="fixed-nav__items">
                 <li class="fixed-nav__items__item">
-                    <div onclick="location.href='/company/introduction/'" class="menu">회사소개</div>
+                    <div id="fixed-nav__menu1" class="menu">회사소개</div>
                     <ul class="fiexed-nav__submenu">
                         <a href="/company/introduction/"><li class="fiexed-nav__submenu__item">인사말</li></a><hr>
                         <a href="/company/waytocome/"><li class="fiexed-nav__submenu__item">오시는 길</li></a>
                     </ul>
                 </li>
                 <li class="fixed-nav__items__item fixed-nav__items__item-center">
-                    <div onclick="location.href='/business/coast/'" class="menu">사업소개</div>
+                    <div id="fixed-nav__menu2" onclick="location.href='/business/coast/'" class="menu">사업소개</div>
                     <ul class="fiexed-nav__submenu">
                         <li class="fiexed-nav__submenu__item" onclick="location.href='/business/coast/'">연안개발</li><hr>
                         <li class="fiexed-nav__submenu__item" onclick="location.href='/business/harbor/'">항만개발</li><hr>
@@ -41,17 +41,17 @@
                     </ul>
                 </li>
                 <li class="fixed-nav__items__item fixed-nav__items__item-center">
-                    <div class="menu" onclick="location.href='/qanda'">문의사항</div>
+                    <div id="fixed-nav__menu3" class="menu" onclick="location.href='/qanda'">문의사항</div>
                 </li>
                 <li class="fixed-nav__items__item fixed-nav__items__item-center">
-                    <div onclick="location.href='/board/notice/'" class="menu">게시판</div>
+                    <div id="fixed-nav__menu4" onclick="location.href='/board/notice/'" class="menu">게시판</div>
                     <ul class="fiexed-nav__submenu">
                         <a href="/board/notice/"><li class="fiexed-nav__submenu__item">공지사항</li></a><hr>
                         <a href="/board/reference/"><li class="fiexed-nav__submenu__item">자료실</li></a>
                     </ul>
                 </li>
                 <li class="fixed-nav__items__item">
-                    <div class="menu" onclick="location.href='/recruit'">채용정보</div>
+                    <div id="fixed-nav__menu5" class="menu" onclick="location.href='/recruit'">채용정보</div>
                 </li>
             </ul>
         </div>

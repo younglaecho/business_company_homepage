@@ -231,7 +231,10 @@
                 <div class="qanda-form__label"> {{ form.email_user.label }}</div>
                 <div class="qanda-form__inputbox">
                     <input class="qanda-form__input" type="{{ form.email_user.field.widget.input_type }}" name="{{ form.email_user.name }}" 
-                                id="{{ form.email_user.id_for_label}}" > @
+                                id="{{ form.email_user.id_for_label}}" >
+                    <div class="specialstring">
+                        @
+                    </div>
                     <input class="qanda-form__input" type="{{ form.email_site.field.widget.input_type }}" name="{{ form.email_site.name }}" 
                                 id="{{ form.email_site.id_for_label}}" >
                                 {% if form.email_user.errors %}
@@ -243,9 +246,15 @@
                 <div class="qanda-form__label"> {{ form.phone_first.label }}</div>
                 <div class="qanda-form__inputbox">
                     <input class="qanda-form__input qanda-form__input-num" type="{{ form.phone_first.field.widget.input_type }}" name="{{ form.phone_first.name }}"
-                                id="{{ form.phone_first.id_for_label}}" > -
+                                id="{{ form.phone_first.id_for_label}}" >
+                    <div class="specialstring">
+                        -
+                    </div>
                     <input class="qanda-form__input qanda-form__input-num" type="{{ form.phone_middle.field.widget.input_type }}" name="{{ form.phone_middle.name }}"
-                                id="{{ form.phone_middle.id_for_label}}" > -
+                                id="{{ form.phone_middle.id_for_label}}" >
+                    <div class="specialstring">
+                        -
+                    </div>
                     <input class="qanda-form__input qanda-form__input-num" type="{{ form.phone_last.field.widget.input_type }}" name="{{ form.phone_last.name }}"
                                 id="{{ form.phone_last.id_for_label}}" >
                                 {% if form.phone_first.errors %}
@@ -262,9 +271,15 @@
                 <div class="qanda-form__inputbox">
 
                     <input class="qanda-form__input qanda-form__input-num" type="{{ form.fax_first.field.widget.input_type }}" name="{{ form.fax_first.name }}"
-                                id="{{ form.fax_first.id_for_label}}" > -
+                                id="{{ form.fax_first.id_for_label}}" >
+                    <div class="specialstring">
+                        -
+                    </div>
                     <input class="qanda-form__input qanda-form__input-num" type="{{ form.fax_middle.field.widget.input_type }}" name="{{ form.fax_middle.name }}"
-                                id="{{ form.fax_middle.id_for_label}}" > -
+                                id="{{ form.fax_middle.id_for_label}}" >
+                    <div class="specialstring">
+                        -
+                    </div>
                     <input class="qanda-form__input qanda-form__input-num" type="{{ form.fax_last.field.widget.input_type }}" name="{{ form.fax_last.name }}"
                                 id="{{ form.fax_last.id_for_label}}" >
                 </div>
