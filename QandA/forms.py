@@ -1,6 +1,11 @@
 from django import forms
 
 class QandAForm(forms.Form):
+    checkbox = forms.BooleanField(
+        error_messages={
+            'required': '개인정보제공에 동의하세요.'
+        }
+    )
     writer = forms.CharField(
         error_messages={
             'required': '작성자를 입력하세요.'
@@ -55,3 +60,4 @@ class QandAForm(forms.Form):
             'required': '내용을 입력하세요.'
         },
         widget=forms.Textarea, label="내용") # widget=forms.Textarea : 입력이 텍스트에어리어 형태로..
+    

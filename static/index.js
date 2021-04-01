@@ -53,7 +53,6 @@ const businessButton4 = document.querySelector('.main__menu__button4')
 const businessButton5 = document.querySelector('.main__menu__button5')
 
 mainButton.addEventListener('mouseover', event => {
-    console.log(event.target)
     if (event.target.classList.contains('main__menu__button1')) {
         business1.style.opacity = 1
         business2.style.opacity = 0
@@ -147,7 +146,7 @@ window.addEventListener('scroll', () => {
     // } else {
     //     fixedNav.style.top = 0;
     // }
-    if ((window.scrollY + window.innerHeight) > mainMenuItems.getBoundingClientRect().top+100) {
+    if ((window.scrollY + window.innerHeight) > mainMenuItems.getBoundingClientRect().top+100 && document.body.clientWidth > 700) {
         mainMenuItems.style.transform = 'translateY(-20px)'
         mainMenuItems.style.opacity = '1'
         mainMenuItems.style.transition = 'all ease-in 0.3s';

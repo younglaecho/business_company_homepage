@@ -18,7 +18,7 @@ class QandA(models.Model):
     content = models.TextField(verbose_name='내용')
     register_dttm = models.DateTimeField(auto_now_add=True,
                                          verbose_name='등록시간')
-
+    image = models.ImageField(upload_to='images/',blank=True, null=True)
     def __str__(self):
         return self.title
 
@@ -26,3 +26,8 @@ class QandA(models.Model):
         db_table = '문의사항'
         verbose_name = '문의사항'
         verbose_name_plural = '문의사항'
+
+
+# class Photo(models.Model):
+#     post = models.ForeignKey(QandA, on_delete=models.CASCADE, null=True)
+#     image = models.ImageField(upload_to='images/', blank=True, null=True)

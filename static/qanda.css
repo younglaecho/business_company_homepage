@@ -1,3 +1,7 @@
+.template_section {
+    margin-top: 8vh;
+    padding: 0 10vw;
+}
 .personal_infobox {
     display: flex;
     flex-wrap: wrap;
@@ -8,17 +12,29 @@
 }
 
 .personal_info-title {
-    width: 80%;
+    width: 100%;
     font-size: 1.5rem;
     border-bottom: 1px solid lightgray;
     margin-bottom: 3%;
 }
 
 .personal_info {
-    width: 80%;
+    width: 100%;
     height: 35vh;
     overflow-y: scroll;
     border: 1px solid lightgray;
+}
+
+.personal_info-checkboxbox {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    font-size: 1.2rem;
+    padding-top: 2vh;
+}
+
+.personal_info-checkbox-text {
+    cursor: pointer;
 }
 .qanda-formbox {
     display: flex;
@@ -54,14 +70,20 @@
     height: 100%;
     font-size: 0.8rem;
 }
-
+span {
+    font-size: 0.8rem;
+}
 .qanda-form__inputbox {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     padding: 0 5%;
     width: 85%;
+    height: 60%;
 }
 .qanda-form__input {
     width: 25%;
-    height: 60%;
+    height: 100%;
     border-radius: 0;
     outline: none;
     border: 1px solid lightgray;
@@ -81,10 +103,38 @@
 }
 
 
+.qanda-form__inputbox-textarea {
+    height: 100%;
+}
+
 .qanda-form__input-textarea {
     width: 100%;
     height: 80%;
     resize: none;
+}
+
+#qanda-form__file-lable {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #999;
+    vertical-align: middle;
+    background-color: #fdfdfd;
+    cursor: pointer;
+    border: 1px solid #ebebeb;
+    border-radius: 5px;
+}
+#qanda-form__file {
+    position: absolute;
+    width: 0;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+}
+
+#qanda-form__uploadname {
+    height: 80%;
+    margin-left: 20px;
 }
 
 .qanda-form__button {

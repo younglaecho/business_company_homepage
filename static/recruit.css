@@ -1,40 +1,44 @@
 .template_section {
-    height:150vh
+    padding-top: 0;
+    height:auto;
 }
 .main {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    height: 140vh;
+    height: auto;
+    padding-top: 0;
+    padding : 0 20vw
 }
 
 .recruitpage-item {
     display: flex;
-    justify-content: space-between ;
-    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: center ;
+    align-items: center;
     width: 100%;
-    height: 50%;
-    padding: 0 10vh;
+    height: 75vh;
+    padding: 0 vw;
+    margin-bottom: 5vh;
+    border-bottom: 1px solid lightgray;
 }
+
 
 .recruitpage-title {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
-    width: 25%;
-    height: 30%;
+    width: 100%;
+    height: 20%;
     max-width: 220px;
     max-height: 120px;
-    padding-right: 5%;
-    font-size: 1.7rem;
+    font-size: 2.5rem;
     font-weight: 600;
-    -webkit-box-shadow: 17px 17px 58px -25px rgba(0,0,0,0.37);
-    -moz-box-shadow: 17px 17px 58px -25px rgba(0,0,0,0.37);
-    box-shadow: 17px 17px 58px -25px rgba(0,0,0,0.37);
+
 }
 
 .recruitpage-content {
-    width: 70%;
+    width: 100%;
     padding-top: 5%;
 }
 .recruitpage-content-list {

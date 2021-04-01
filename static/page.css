@@ -2,7 +2,9 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    font-size: 3rem;
+    font-size: 2.5rem;
+    letter-spacing: 0.2rem;
+
     font-weight: 600;
 }
 
@@ -11,8 +13,8 @@
     justify-content: center;
     width: 100%;
     padding-top: 2vh;
-    font-size: 2rem;
-
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
 
 }
 .template_section {
@@ -22,7 +24,7 @@
     flex-wrap: nowrap;
     padding: 1% 5%;
     position: relative;
-    top: 8vh;
+    top: 4.7vh;
     height: auto;
     justify-content: left;
 }
@@ -69,7 +71,7 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    height:50vh;
+    height: auto;
     margin-top:5vh;
     color: gray;
 }
@@ -101,6 +103,12 @@
 }
 
 @media all and (min-width:320px) and (max-width:728px) {
+    .template_section {
+        padding: 1% 0%
+    }
+    .main {
+        padding: 5% 0%;
+    }
     .aside {
         display: none;
     }
@@ -108,8 +116,8 @@
         width: 100%;
     }
     .waytocome__map__item {
-        width: 80vw;
-        height: 80vw;    
+        width: 70vw;
+        height: 70vw;    
     }
     .waytocome__map__textbox {
         width: 100%;

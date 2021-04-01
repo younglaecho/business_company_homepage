@@ -23,7 +23,6 @@
 }
 .business-content__textbox {
     width: 100%;
-    
 }
 
 .business-content__textlist {
@@ -68,7 +67,7 @@
 }
 
 #business__coast__stormimage1 {
-    background-image: url("img/business_coast/폭풍해일실험_그림.jpg");
+    background-image: url("static/img/business_coast/폭풍해일실험_그림.jpg");
 
 }
 #business__coast__stormimage2{

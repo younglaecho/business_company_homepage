@@ -15,10 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf import settings
+from django.conf.urls.static import static
 from company_user.views import home, introduction, waytocome, login, businesCoast, businessHarbor, businessMarEnv, businessMarPhysics,businessGIS, recruit, qanda
 from board.views import NoticeList,ReferenceList, NoticeboardDetail, ReferenceboardDetail
 from QandA.views import QandA_write, personal_info
-
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -42,4 +43,5 @@ urlpatterns = [
 
     # path('comment/modify/question/<int:comment_id>/', comment_modify_question, name='comment_modify_question'),
     # path('comment/delete/question/<int:comment_id>/', comment_delete_question, name='comment_delete_question'),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+

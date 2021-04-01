@@ -19,7 +19,7 @@ def QandA_write(request):
             fax_first = form.cleaned_data['fax_first']
             fax_middle = form.cleaned_data['fax_middle']
             fax_last = form.cleaned_data['fax_last']
-
+            file_upload = request.FILES['imgs']
 
             qanda.writer = form.cleaned_data['writer']
             qanda.company = form.cleaned_data['company']
@@ -28,6 +28,7 @@ def QandA_write(request):
             qanda.fax = fax_first + '-' + fax_middle + '-' + fax_last
             qanda.title = form.cleaned_data['title']
             qanda.content = form.cleaned_data['content']
+            qanda.image = file_upload
             qanda.save()
 
             return redirect('/qanda/')

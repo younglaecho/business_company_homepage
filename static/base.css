@@ -27,9 +27,16 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     margin: 0;
-    font-family: 'NanumSquare', sans-serif !important;
+    font-family: 'YoonⓇ 민국', sans-serif !important;
 }
 
 * {
@@ -204,11 +211,16 @@ hr {
     align-items: center;
     margin: auto;
     margin-top: 5vh;
+    cursor: pointer;
+
 }
 .main__organization-item {
     width: 12%;
     max-height: 90%;
+    margin: 0 2%;
+    cursor: pointer;
 }
+
 .footer {
     display: flex;
     flex-wrap: wrap;
