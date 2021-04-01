@@ -13,13 +13,9 @@ const LinktoPage = function (event) {
         location.href = '/company/introduction/'
     } else if (event.target==menuItem2) {
         location.href = '/business/coast/'
-    } else if (event.target==menuItem3) {
-        location.href = '/qanda/'
     } else if (event.target==menuItem4) {
         location.href = '/board/notice/'
-    } else if (event.target==menuItem5) {
-        location.href = '/recruit'
-    }
+    } 
 }
 menuList.addEventListener('click', LinktoPage)
 
