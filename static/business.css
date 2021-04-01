@@ -67,36 +67,32 @@
 }
 
 #business__coast__stormimage1 {
-    background-image: url("/static/img/business_coast/폭풍해일실험_그림.jpg");
+    background-image: url(img/business_coast/stormsurge_image.jpg);
 
 }
 #business__coast__stormimage2{
-    background-image: url(img/business_coast/폭풍해일실험_태풍.jpg);
-
-}
-#business__coast__stormimage2{
-    background-image: url(img/business_coast/폭풍해일실험_태풍.jpg);
+    background-image: url(img/business_coast/stormsurge_storm.jpg);
 
 }
 #business__coast__earthquake1{
-    background-image: url(img/business_coast/지진해일실험_그림.jpg);
+    background-image: url(img/business_coast/tsunami_image.jpg);
 
 }
 #business__coast__earthquake2{
-    background-image: url(img/business_coast/지진해일실험_지진.jpg);
+    background-image: url(img/business_coast/tsunami_earthquake.jpg);
 
 }
 #business__coast__coastimage1{
-    background-image: url(img/business_coast/해안선변형실험_그림1.JPG);
+    background-image: url(img/business_coast/shoreline_image1.JPG);
 
 }
 #business__coast__coastimage2{
-    background-image: url(img/business_coast/해안선변형실험_그림2.JPG);
+    background-image: url(img/business_coast/shoreline_image2.JPG);
 
 }
 #business__coast__onbaesuimage1{
-    background-image: url(img/business_coast/온배수확산실험_그림1.jpg);
+    background-image: url(img/business_coast/diffusion_image1.jpg);
 }
 #business__coast__onbaesuimage2{
-    background-image: url(img/business_coast/ff.jpg);
+    background-image: url(img/business_coast/diffusion_image2.jpg);
 }
