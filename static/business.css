@@ -71,7 +71,7 @@
     display: flex;
     justify-content: space-evenly;
     width: 100%;
-    height: 40vh;
+    height: auto;
     margin-top: 5vh;
 }
 
@@ -115,4 +115,26 @@
 }
 #business__coast__onbaesuimage2{
     background-image: url(img/business_coast/diffusion_image2.jpg);
+}
+
+
+@media all and (min-width:320px) and (max-width:728px) {
+    .business-content__textlist {
+        width: 80vw;
+        margin-bottom: 0vh;
+    }
+    .business-content__text {
+        font-size: 0.8rem;
+    }
+    .business-content__item-title {
+        font-size: 1.2rem;
+    }
+    .business-content__item-image {
+        width: 45vw;
+        height: 45vw;
+    }
+}
+
+@media all and (min-width:728px) and (max-width:1024px) {
+    
 }
