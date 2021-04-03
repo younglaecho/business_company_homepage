@@ -83,6 +83,9 @@ span {
     height: 60%;
 }
 
+.qanda-form {
+    height: auto;
+}
 .specialstring {
     display: flex;
     justify-content: center;

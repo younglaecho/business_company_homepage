@@ -180,7 +180,7 @@
     width: 80%;
     position: relative;
     z-index: 1;
-    border-bottom: 1px solid rgb(196, 196, 196);
+    border-bottom: 2px solid rgb(196, 196, 196);
 
 }
 
@@ -207,7 +207,7 @@
 
 .main__menu__button:hover {
     background-color: rgb(196, 196, 196);
-    border-bottom: 1px solid rgb(196, 196, 196);
+    /* border-bottom: 1px solid rgb(196, 196, 196); */
     color: white;
 }
 /* 
