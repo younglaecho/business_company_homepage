@@ -13,7 +13,7 @@
 
 .personal_info-title {
     width: 100%;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     border-bottom: 1px solid lightgray;
     margin-bottom: 3%;
 }
@@ -23,6 +23,7 @@
     height: 35vh;
     overflow-y: scroll;
     border: 1px solid lightgray;
+    font-size: 0.8rem;
 }
 
 .personal_info-checkboxbox {
@@ -68,7 +69,7 @@
     align-items: center;
     width: 15%;
     height: 100%;
-    font-size: 0.8rem;
+    font-size: 15px;
 }
 span {
     font-size: 0.8rem;
