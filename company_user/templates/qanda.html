@@ -9,7 +9,7 @@
         display: none;
     }
     .main {
-        width: 100%
+        width: 100%;
     }
 </style>
 
@@ -23,6 +23,119 @@
         <div class="qanda-formbox">
             <!-- <div class="qanda-formbox-title">문의</div> -->
             {% csrf_token %}
+            <div class="qanda-form__item"> 
+                <div class="qanda-form__label"> {{ form.writer.label }}</div>
+                <div class="qanda-form__inputbox">
+                    <input class="qanda-form__input" type="{{ form.writer.field.widget.input_type }}" name="{{ form.writer.name }}" 
+                                id="{{ form.writer.id_for_label}}" >
+                    {% if form.writer.errors %}
+                        <span style="color: red;"> {{ form.writer.errors }}</span>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="qanda-form__item"> 
+                <div class="qanda-form__label"> {{ form.company.label }}</div>
+                <div class="qanda-form__inputbox">
+                    <input class="qanda-form__input" type="{{ form.company.field.widget.input_type }}" name="{{ form.company.name }}" 
+                                id="{{ form.company.id_for_label}}" >
+                                {% if form.company.errors %}
+                                    <span style="color: red;"> {{ form.company.errors }}</span>
+                                {% endif %}
+                </div>
+            </div>
+            <div class="qanda-form__item"> 
+                <div class="qanda-form__label"> {{ form.email_user.label }}</div>
+                <div class="qanda-form__inputbox">
+                    <input class="qanda-form__input" type="{{ form.email_user.field.widget.input_type }}" name="{{ form.email_user.name }}" 
+                                id="{{ form.email_user.id_for_label}}" >
+                    <div class="specialstring">
+                        @
+                    </div>
+                    <input class="qanda-form__input" type="{{ form.email_site.field.widget.input_type }}" name="{{ form.email_site.name }}" 
+                                id="{{ form.email_site.id_for_label}}" >
+                                {% if form.email_user.errors %}
+                                    <span style="color: red;"> {{ form.email_user.errors }}</span>
+                                {% endif %}
+                </div>
+            </div>
+            <div class="qanda-form__item"> 
+                <div class="qanda-form__label"> {{ form.phone_first.label }}</div>
+                <div class="qanda-form__inputbox">
+                    <input class="qanda-form__input qanda-form__input-num" type="{{ form.phone_first.field.widget.input_type }}" name="{{ form.phone_first.name }}"
+                                id="{{ form.phone_first.id_for_label}}" >
+                    <div class="specialstring">
+                        -
+                    </div>
+                    <input class="qanda-form__input qanda-form__input-num" type="{{ form.phone_middle.field.widget.input_type }}" name="{{ form.phone_middle.name }}"
+                                id="{{ form.phone_middle.id_for_label}}" >
+                    <div class="specialstring">
+                        -
+                    </div>
+                    <input class="qanda-form__input qanda-form__input-num" type="{{ form.phone_last.field.widget.input_type }}" name="{{ form.phone_last.name }}"
+                                id="{{ form.phone_last.id_for_label}}" >
+                                {% if form.phone_first.errors %}
+                                    <span style="color: red;"> {{ form.phone_first.errors }}</span>
+                                {% elif form.phone_second.errors %}
+                                    <span style="color: red;"> {{ form.phone_second.errors }}</span>
+                                {% elif form.phone_third.errors %}
+                                    <span style="color: red;"> {{ form.phone_third.errors }}</span>
+                                {% endif %}
+                </div>
+            </div>
+            <div class="qanda-form__item"> 
+                <div class="qanda-form__label"> {{ form.fax_first.label }}</div>
+                <div class="qanda-form__inputbox">
+
+                    <input class="qanda-form__input qanda-form__input-num" type="{{ form.fax_first.field.widget.input_type }}" name="{{ form.fax_first.name }}"
+                                id="{{ form.fax_first.id_for_label}}" >
+                    <div class="specialstring">
+                        -
+                    </div>
+                    <input class="qanda-form__input qanda-form__input-num" type="{{ form.fax_middle.field.widget.input_type }}" name="{{ form.fax_middle.name }}"
+                                id="{{ form.fax_middle.id_for_label}}" >
+                    <div class="specialstring">
+                        -
+                    </div>
+                    <input class="qanda-form__input qanda-form__input-num" type="{{ form.fax_last.field.widget.input_type }}" name="{{ form.fax_last.name }}"
+                                id="{{ form.fax_last.id_for_label}}" >
+                </div>
+            </div>
+            <div class="qanda-form__item"> 
+                <div class="qanda-form__label"> {{ form.title.label }}</div>
+                <div class="qanda-form__inputbox">
+                    <input class="qanda-form__input" type="{{ form.title.field.widget.input_type }}" name="{{ form.title.name }}" 
+                                id="{{ form.title.id_for_label}}" >
+                                {% if form.title.errors %}
+                                    <span style="color: red;"> {{ form.title.errors }}</span>
+                                {% endif %}
+                </div>
+            </div>
+            <div class="qanda-form__item qanda-form__item-textarea">
+                <div class="qanda-form__label qanda-form__label-textarea"> {{ form.content.label }}</div>
+                <div class="qanda-form__inputbox qanda-form__inputbox-textarea ">
+                    <textarea class="qanda-form__input qanda-form__input-textarea" name="{{ form.content.name }}" rows="15"></textarea>
+                    {% if form.content.errors %}
+                        <span style="color: red;"> {{ form.content.errors }}</span>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="qanda-form__item"> 
+                <div class="qanda-form__label"> 사진 </div>
+                <div class="qanda-form__inputbox">
+                    <label id="qanda-form__file-lable" for="qanda-form__file">업로드</label>
+
+                    <input id="qanda-form__file" type="file" name="imgs" onchange="changeFile()">
+                    <input id="qanda-form__uploadname" value="파일선택" >
+                    <script>
+                        const changeFile = function () {
+                            let formFile = document.querySelector("#qanda-form__file")
+                            let formFilename = document.querySelector("#qanda-form__uploadname")
+                            formvalue =formFile.value
+                            formFilename.value = formvalue.replace(/^.*\\/, '')
+                        }
+                    </script>
+                </div>
+            </div>
             <div class="personal_infobox">
                 <div class="personal_info-title">개인정보처리방침</div>
                 <div class="personal_info">
@@ -207,120 +320,6 @@
                 <span style="color: red;"> {{ form.checkbox.errors }}</span>
             {% endif %}
             </div>
-            <div class="qanda-form__item"> 
-                <div class="qanda-form__label"> {{ form.writer.label }}</div>
-                <div class="qanda-form__inputbox">
-                    <input class="qanda-form__input" type="{{ form.writer.field.widget.input_type }}" name="{{ form.writer.name }}" 
-                                id="{{ form.writer.id_for_label}}" >
-                    {% if form.writer.errors %}
-                        <span style="color: red;"> {{ form.writer.errors }}</span>
-                    {% endif %}
-                </div>
-            </div>
-            <div class="qanda-form__item"> 
-                <div class="qanda-form__label"> {{ form.company.label }}</div>
-                <div class="qanda-form__inputbox">
-                    <input class="qanda-form__input" type="{{ form.company.field.widget.input_type }}" name="{{ form.company.name }}" 
-                                id="{{ form.company.id_for_label}}" >
-                                {% if form.company.errors %}
-                                    <span style="color: red;"> {{ form.company.errors }}</span>
-                                {% endif %}
-                </div>
-            </div>
-            <div class="qanda-form__item"> 
-                <div class="qanda-form__label"> {{ form.email_user.label }}</div>
-                <div class="qanda-form__inputbox">
-                    <input class="qanda-form__input" type="{{ form.email_user.field.widget.input_type }}" name="{{ form.email_user.name }}" 
-                                id="{{ form.email_user.id_for_label}}" >
-                    <div class="specialstring">
-                        @
-                    </div>
-                    <input class="qanda-form__input" type="{{ form.email_site.field.widget.input_type }}" name="{{ form.email_site.name }}" 
-                                id="{{ form.email_site.id_for_label}}" >
-                                {% if form.email_user.errors %}
-                                    <span style="color: red;"> {{ form.email_user.errors }}</span>
-                                {% endif %}
-                </div>
-            </div>
-            <div class="qanda-form__item"> 
-                <div class="qanda-form__label"> {{ form.phone_first.label }}</div>
-                <div class="qanda-form__inputbox">
-                    <input class="qanda-form__input qanda-form__input-num" type="{{ form.phone_first.field.widget.input_type }}" name="{{ form.phone_first.name }}"
-                                id="{{ form.phone_first.id_for_label}}" >
-                    <div class="specialstring">
-                        -
-                    </div>
-                    <input class="qanda-form__input qanda-form__input-num" type="{{ form.phone_middle.field.widget.input_type }}" name="{{ form.phone_middle.name }}"
-                                id="{{ form.phone_middle.id_for_label}}" >
-                    <div class="specialstring">
-                        -
-                    </div>
-                    <input class="qanda-form__input qanda-form__input-num" type="{{ form.phone_last.field.widget.input_type }}" name="{{ form.phone_last.name }}"
-                                id="{{ form.phone_last.id_for_label}}" >
-                                {% if form.phone_first.errors %}
-                                    <span style="color: red;"> {{ form.phone_first.errors }}</span>
-                                {% elif form.phone_second.errors %}
-                                    <span style="color: red;"> {{ form.phone_second.errors }}</span>
-                                {% elif form.phone_third.errors %}
-                                    <span style="color: red;"> {{ form.phone_third.errors }}</span>
-                                {% endif %}
-                </div>
-            </div>
-            <div class="qanda-form__item"> 
-                <div class="qanda-form__label"> {{ form.fax_first.label }}</div>
-                <div class="qanda-form__inputbox">
-
-                    <input class="qanda-form__input qanda-form__input-num" type="{{ form.fax_first.field.widget.input_type }}" name="{{ form.fax_first.name }}"
-                                id="{{ form.fax_first.id_for_label}}" >
-                    <div class="specialstring">
-                        -
-                    </div>
-                    <input class="qanda-form__input qanda-form__input-num" type="{{ form.fax_middle.field.widget.input_type }}" name="{{ form.fax_middle.name }}"
-                                id="{{ form.fax_middle.id_for_label}}" >
-                    <div class="specialstring">
-                        -
-                    </div>
-                    <input class="qanda-form__input qanda-form__input-num" type="{{ form.fax_last.field.widget.input_type }}" name="{{ form.fax_last.name }}"
-                                id="{{ form.fax_last.id_for_label}}" >
-                </div>
-            </div>
-            <div class="qanda-form__item"> 
-                <div class="qanda-form__label"> {{ form.title.label }}</div>
-                <div class="qanda-form__inputbox">
-                    <input class="qanda-form__input" type="{{ form.title.field.widget.input_type }}" name="{{ form.title.name }}" 
-                                id="{{ form.title.id_for_label}}" >
-                                {% if form.title.errors %}
-                                    <span style="color: red;"> {{ form.title.errors }}</span>
-                                {% endif %}
-                </div>
-            </div>
-            <div class="qanda-form__item qanda-form__item-textarea">
-                <div class="qanda-form__label qanda-form__label-textarea"> {{ form.content.label }}</div>
-                <div class="qanda-form__inputbox qanda-form__inputbox-textarea ">
-                    <textarea class="qanda-form__input qanda-form__input-textarea" name="{{ form.content.name }}" rows="15"></textarea>
-                    {% if form.content.errors %}
-                        <span style="color: red;"> {{ form.content.errors }}</span>
-                    {% endif %}
-                </div>
-            </div>
-            <div class="qanda-form__item"> 
-                <div class="qanda-form__label"> 사진 </div>
-                <div class="qanda-form__inputbox">
-                    <label id="qanda-form__file-lable" for="qanda-form__file">업로드</label>
-
-                    <input id="qanda-form__file" type="file" name="imgs" onchange="changeFile()">
-                    <input id="qanda-form__uploadname" value="파일선택" >
-                    <script>
-                        const changeFile = function () {
-                            let formFile = document.querySelector("#qanda-form__file")
-                            let formFilename = document.querySelector("#qanda-form__uploadname")
-                            formvalue =formFile.value
-                            formFilename.value = formvalue.replace(/^.*\\/, '')
-                        }
-                    </script>
-                </div>
-            </div>
-    
             <button class="qanda-form__button" type="submit" class="btn btn-primary">문의하기</button>
         </div>
 
