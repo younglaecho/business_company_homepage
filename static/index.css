@@ -376,6 +376,6 @@
 
 @media all and (max-width:580px) {
     .main__menu {
-        height: 70vh;
+        height: 90vh;
     }
 }
