@@ -283,8 +283,8 @@
     }
     .main__menu {
         height: 55vh;
-
-    }.main__menu__items {
+    }
+    .main__menu__items {
         opacity: 1;
         transform: translateY(20px);
     }
@@ -371,5 +371,11 @@
     
     .main__map__text_small {
         font-size: 1rem;
+    }
+}
+
+@media all and (max-width:580px) {
+    .main__menu {
+        height: 70vh;
     }
 }
