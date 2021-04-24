@@ -288,11 +288,23 @@
         opacity: 1;
         transform: translateY(20px);
     }
+    .main__menu__text {
+        height: 8%;
+    }
     .main__menu__text__item1 {
+        display: flex;
+        justify-content: center;
         font-size: 1.3rem;
+        padding: 0 1vw;
+        width: 40%;
     }
     .main__menu__text__item2 {
+        display: flex;
+        justify-content: center;
         font-size: 1rem;
+        padding: 0 2vw;
+        
+        width: 60%;
     }
 
     .main__menu__items__item {
@@ -320,6 +332,7 @@
     }
 
     .main__menu__buttonbox {
+        width: 90%;
         padding: 0 0vh;
     }
 
