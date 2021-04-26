@@ -1,0 +1,55 @@
+.main {
+    width:80vw;
+}
+.intro__bigtext {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 8vh;
+}
+
+.intro__bigtext-text {
+    display: flex;
+    justify-content: center;
+    width:100%;
+    font-size : 2.0rem;
+    margin: 0.5rem 0;
+    font-weight: 900;
+
+}
+.intro__coloredtext {
+    color: rgb(190, 8, 190);
+}
+.intro__boldtext {
+    display: flex;
+    flex-wrap: wrap;
+    width:100%;
+    line-height: 2.3rem;
+    margin-bottom: 2vh;
+}
+
+.intro__boldtext-text {
+    display: flex;
+    font-size: 1.3rem;
+    line-height: 2.5rem;
+    font-weight: 900;
+}
+
+.intro__smalltext {
+    display: flex;
+    line-height: 2.3rem;
+    font-size: 1.3rem;
+    font-weight: 100;
+    margin-bottom: 3vh;
+
+}
+.intro__smalltext-text {
+    display: flex;
+    font-size: 1.3rem;
+    line-height: 2.5rem;
+}
+.intro__outro {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.1rem;
+}

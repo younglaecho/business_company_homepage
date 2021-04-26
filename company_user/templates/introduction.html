@@ -1,4 +1,9 @@
 {% extends "page.html" %}
+
+{% block header %}
+<link rel="stylesheet" href="/static/page.css">
+<link rel="stylesheet" href="/static/introduction.css">
+{% endblock %}
 {% block pagetitle %}
 <div class="page-title">회사소개</div>
 <div class="page-title-line"> </div>
@@ -13,28 +18,28 @@
 {% endblock %}
 
 {% block main %}
-    인사말
     <div class="intoduction">
-        1. 질병은 입을 좇아 들어가고
-        화근은 입을 좇아 나온다… 태평어람<br>
-        2. 행복이란
-        타인을 행복하게 해주려는 노력의 부산물이다.<br>
-        3. 지혜는 듣는 데서 오고
-        후회는 말하는 데서 온다.<br>
-        4. 인간은 의욕하는 것, 그리고
-        창조하는 것에 의해서만이 행복하다.<br>
-        5. 말을 많이 하는 것과
-        말을 잘하는 것은 다르다.<br>
-        6. 착한 일을 하는 사람에게는 하늘이
-        복을 주시고, 악한 일을 하는 사람에게는
-        하늘이 재앙을 주느니라. [공자:명심보감]<br>
-        7. 탐욕은 일체를 얻고자 욕심내어서
-        도리어 모든 것을 잃어버린다. [몽테뉴]<br>
-        8. 백 권의 책에 쓰인 말보다, 한 가지 성실한
-        마음이 더 크게 사람을 움직인다. [프랭클린]<br>
-        9. 가장 높은 곳에 올라가려면 가장 낮은 곳부터
-        시작하라.[푸블릴리우스 시루스]<br>
-        10. 건강을 이기는 미(美)는 없다.<br>
-        11. 프로에게서 자기 수련과 극기심을
+        <div class="intro__bigtext">
+            <p class="intro__bigtext-text"><span class="intro__coloredtext">"</span>새로운 가치를 추구하며<span class="intro__coloredtext">"</span></p>
+            <p class="intro__bigtext-text">구성원&nbsp<span class="intro__coloredtext"> 모두</span>가 &nbsp<span class="intro__coloredtext">행복한</span> &nbsp회사로</p>
+            <p class="intro__bigtext-text">성장 발전 하겠습니다.</p>
+        </div>
+        <div class="intro__boldtext">
+            <p class="intro__boldtext-text">2002년 설립된 ㈜해강기술은<br>
+            다양한 해양분야에서 쌓은 경험과 기술을 바탕으로 고객에게<br>
+            충분한 만족을 드리며<br>
+            급변하는 기술 변화에 대응하고 있는 해양수치모델 전문기업입니다<br></p>
+        </div>
+        <div class="intro__smalltext">
+            <p class="intro__smalltext-text">
+            해양수치모델, 연안재해, 인공지능적용, 해역이용협의, 해양GIS구축 등에<br>
+            최고의 기술력 및 신뢰성 그리고 고객만족을 추구하여 <br>
+            귀사의 성공적이고 원활한 사업 추진에 <br>
+            일익을 담당하고자 합니다.<br></p>
+        </div>
+        <div class="intro__outro">
+            감사합니다.<br>
+            ㈜해강기술 대표이사[드림]
+        </div>
     </div>
 {% endblock %}
