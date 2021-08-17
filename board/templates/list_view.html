@@ -1,6 +1,6 @@
 {% extends "base.html"%}
 {% load humanize %}
-
+{% load mathfilters %}
 {% block header %}
 <link rel="stylesheet" href="/static/page.css">
 <link rel="stylesheet" href="/static/board_list.css">
@@ -27,30 +27,53 @@
                 </ul>
             </li>
             {% for post in post_list %}
-            {% block postlink %}
-            {% endblock %}
-                <ul class="board_item-properties">
-                    <li class="board_item-property board_item-property-number">{{ post.id }}</li>
-                    <li class="board_item-property board_item-property-title">{{ post.title }}</li>
-                    <li class="board_item-property board_item-property-writer">{{ post.writer }}</li>
-                    <li class="board_item-property board_item-property-dttm">{{ post.registered_dttm|date:'Y-m-d H:i' }}</li>
-                    <li class="board_item-property board_item-property-hits">{{ post.post_hit }}</li>
-                </ul>
-            </li>
+                {% block postlink %}
+                {% endblock %}
+                    <ul class="board_item-properties">
+                        <li class="board_item-property board_item-property-number">{{ post.id }}</li>
+                        <li class="board_item-property board_item-property-title">{{ post.title }}</li>
+                        <li class="board_item-property board_item-property-writer">{{ post.writer }}</li>
+                        <li class="board_item-property board_item-property-dttm">{{ post.registered_dttm|date:'Y-m-d H:i' }}</li>
+                        <li class="board_item-property board_item-property-hits">{{ post.post_hit }}</li>
+                    </ul>
+                </li>
+                {% if forloop.last and not forloop.counter|divisibleby:5 %}
+                    {% with blank=forloop.counter|mod:5|add:1 %}
+                        {% for i in "x"|rjust:blank %}
+                            <li class="board_list-col"></li>
+                        {% endfor %}
+                    {% endwith %}
+                {% endif %}
+            {% empty %}
+                {% for i in "x"|rjust:5 %}
+                    <li class="board_list-col"></li>
+                {% endfor %}
             {% endfor %}
+
+            {# {% if list_num_extra > 0 %} #}
+                {# {% for i in "x"|rjust:list_num_extra %} #}
+                    {# <li class="board_list-col"></li> #}
+                {# {% endfor %} #}
+            {# {% endif %} #}
             <div class="pagination" style="width:100%">
                 <div class="page-numbering-box">
-                    {% if page_obj.has_previous %}
-                        <div class='first-page' href="?page=1">&laquo; first</div>
-                        <div class='previous-page' href="?page={{ page_obj.previous_page_number }}">previous</div>
-                    {% endif %}
-                    <div class="current-page">
-                        {{ page_obj.number }} 
-                        <!-- of {{ page_obj.paginator.num_pages }}. -->
-                    </div>
-                    {% if page_obj.has_next %}
-                        <div onclick='loaction.href="?page={{ page_obj.next_page_number }}"'>next</div>
-                        <div style="width:100%" onclick='loaction.href="./?page={{ page_obj.paginator.num_pages }}"'>last &raquo;</div>
+                    {% if page_obj.has_other_pages %}
+                        {% for page in page_list %}
+                            {% with near_page_obj_num=page_obj.number|add:page %}
+                                {% if page == 0 %}
+                                    <div class="page current-page">
+                                        {{ page_obj.number|default:"1" }} 
+                                        <!-- of {{ page_obj.paginator.num_pages }}. -->
+                                    </div>
+                                {% elif near_page_obj_num > page_obj.paginator.num_pages %}
+                                    <div class="page blank-page"></div>
+                                {% elif near_page_obj_num > 0 %}
+                                    <a class ='page' href="?page={{ near_page_obj_num }}">{{ near_page_obj_num }}</a>
+                                {% else %}
+                                    <div class="page blank-page"></div>
+                                {% endif %}
+                            {% endwith %}
+                        {% endfor %}
                     {% endif %}
                 </div>
             </div>

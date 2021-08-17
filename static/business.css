@@ -1,5 +1,5 @@
 .template_section {
-    height: auto;
+  height: auto;
 }
 /* .business-title {
     display: flex;
@@ -17,134 +17,296 @@
 } */
 
 .main {
-    padding-top: 2vh;
+  padding: 2vh 5vw;
 }
 .business-content {
-    display: flex;
-    flex-wrap: wrap;
-
+  display: flex;
+  flex-wrap: wrap;
 }
 .business-content__textbox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: auto;
-    margin-bottom: 1.3vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin-bottom: 1.3vh;
 }
 
 .business-content__textlist {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    width: 80vw;
-    padding-left: 0;
-    padding: 3vh 0;
-    border-top: 1px solid lightgray;
-    border-bottom: 1px solid lightgray;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  width: 80vw;
+  padding-left: 0;
+  padding: 3vh 0;
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
 }
 
 .business-content__text {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    padding: 5px 0;
-    font-size: 1.2rem;
-    /* display:list-item; */
-    /* list-style-type:square; */
-
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 5px 0;
+  font-size: 1.2rem;
+  /* display:list-item; */
+  /* list-style-type:square; */
 }
 .business-content__item {
-    width:100%; 
-    margin-bottom: 5vh;
-    
+  width: 100%;
+  margin-bottom: 5vh;
+  border: 1px solid lightgray;
 }
 .business-content__item-title {
-    display: flex;
-    justify-content: center;
-    width:100%;
-    padding-left: 2vw;
-    font-size: 1.4rem;
-    font-weight: 500;
-    /* border-top: 1px solid #73A1C3; */
-    /* border-bottom: 1px solid #73A1C3; */
-    background: rgb(215,238,251);
-    background: linear-gradient(20deg, rgba(215,238,251,1) 0%, rgba(145,184,213,1) 56%, rgba(98,146,182,1) 100%);
-    color: white;
-    padding: 2vh 0;
-
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-left: 2vw;
+  font-size: 1.4rem;
+  font-weight: 500;
+  /* border-top: 1px solid #73A1C3; */
+  /* border-bottom: 1px solid #73A1C3; */
+  background: rgb(215, 238, 251);
+  background: linear-gradient(
+    20deg,
+    rgba(215, 238, 251, 1) 0%,
+    rgba(145, 184, 213, 1) 56%,
+    rgba(98, 146, 182, 1) 100%
+  );
+  color: white;
+  padding: 2vh 0;
 }
 
-
 .business-content__item-imagebox {
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-    height: auto;
-    margin-top: 5vh;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 30vh;
+  margin-top: 5vh;
 }
 
 .business-content__item-image {
-    width: 40vh;
-    height: 40vh;
-    margin-top: 1vh;
-    /* border: 1px solid lightgray; */
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y: center;
+  width: 100%;
+  height: 80%;
+  margin-top: 1vh;
+  border: none;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
 }
 
 #business__coast__stormimage1 {
-    background-image: url(img/business_coast/stormsurge_image.jpg);
-
+  background-image: url(img/business_coast/stormsurge/폭풍해일1.jpeg);
 }
-#business__coast__stormimage2{
-    background-image: url(img/business_coast/stormsurge_storm.jpg);
-
+#business__coast__stormimage2 {
+  background-image: url(img/business_coast/stormsurge/stormsurge_storm.jpg);
 }
-#business__coast__earthquake1{
-    background-image: url(img/business_coast/tsunami_image.jpg);
-
-}
-#business__coast__earthquake2{
-    background-image: url(img/business_coast/tsunami_earthquake.jpg);
-
-}
-#business__coast__coastimage1{
-    background-image: url(img/business_coast/shoreline_image1.JPG);
-
-}
-#business__coast__coastimage2{
-    background-image: url(img/business_coast/shoreline_image2.JPG);
-
-}
-#business__coast__onbaesuimage1{
-    background-image: url(img/business_coast/diffusion_image1.jpg);
-}
-#business__coast__onbaesuimage2{
-    background-image: url(img/business_coast/diffusion_image2.jpg);
+#business__coast__stormimage3 {
+  background-image: url(img/business_coast/stormsurge/stormsurge.png);
 }
 
-
-@media all and (min-width:320px) and (max-width:728px) {
-    .business-content__textlist {
-        width: 80vw;
-        margin-bottom: 0vh;
-    }
-    .business-content__text {
-        font-size: 0.8rem;
-    }
-    .business-content__item-title {
-        font-size: 1.2rem;
-    }
-    .business-content__item-image {
-        width: 45vw;
-        height: 45vw;
-    }
+#business__coast__earthquake1 {
+  background-image: url(img/business_coast/earthquake/tsunami_earthquake.jpg);
+}
+#business__coast__earthquake2 {
+  background-image: url(img/business_coast/earthquake/tsunami_image.jpg);
+}
+#business__coast__earthquake3 {
+  background-image: url(img/business_coast/earthquake/z_01_009000.jpg);
 }
 
-@media all and (min-width:728px) and (max-width:1024px) {
-    
+#business__coast__coastimage1 {
+  background-image: url("img/business_coast/shoreline/case8.jpg");
+}
+#business__coast__coastimage2 {
+  background-image: url(img/business_coast/shoreline/shoreline_image1.JPG);
+}
+#business__coast__coastimage3 {
+  background-image: url(img/business_coast/shoreline/shoreline_image2.JPG);
+}
+
+#business__coast__onbaesuimage1 {
+  background-image: url(img/business_coast/diffusion/diffusion_image1.jpg);
+}
+#business__coast__onbaesuimage2 {
+  background-image: url(img/business_coast/diffusion/diffusion_image2.jpg);
+}
+#business__coast__onbaesuimage3 {
+  background-image: url("img/business_coast/diffusion/diffusion_image3.png");
+}
+
+#business__coast__sedmove1 {
+  background-image: url(img/business_harbor/sedmove/sedmove1.jpg);
+}
+#business__coast__sedmove2 {
+  background-image: url(img/business_harbor/sedmove/sedmove2.jpg);
+}
+#business__coast__sedmove3 {
+  background-image: url("img/business_harbor/sedmove/퇴적물이동실험_그림.jpg");
+}
+
+#business__coast__wavedefor1 {
+  background-image: url(img/business_harbor/wavedefor/50yr_SW_L01_post_CN.jpg);
+}
+#business__coast__wavedefor2 {
+  background-image: url(img/business_harbor/wavedefor/50yr_SW_L01_vector_CN.jpg);
+}
+#business__coast__wavedefor3 {
+  background-image: url("img/business_harbor/wavedefor/L01_Bathymetry_200407.jpg");
+}
+
+#business__coast__harbortemp1 {
+  background-image: url("img/business_harbor/harbortemp/항내정온도_1.jpg");
+}
+#business__coast__harbortemp2 {
+  background-image: url(img/business_harbor/harbortemp/항내정온도_2.jpg);
+}
+#business__coast__harbortemp3 {
+  background-image: url("img/business_harbor/harbortemp/항내정온도_3.jpg");
+}
+
+#business__coast__harbormove1 {
+  background-image: url("img/business_harbor/harbormove/flow_ebb_Run-f3_post.jpg");
+}
+#business__coast__harbormove2 {
+  background-image: url(img/business_harbor/harbormove/해수유동실험_그림2.jpg);
+}
+#business__coast__harbormove3 {
+  background-image: url("img/business_harbor/harbormove/해수유동실험_그림.jpg");
+}
+
+#business__marenv__seasedment1 {
+  background-image: url(img/business_marenv/seasedment/DSC00277.JPG);
+}
+#business__marenv__seasedment2 {
+  background-image: url(img/business_marenv/seasedment/IMG_1532.JPG);
+}
+#business__marenv__seasedment3 {
+  background-image: url(img/business_marenv/seasedment/image16.jpg);
+}
+
+#business__marenv__temsalt1 {
+  background-image: url(img/business_marenv/temsalt/관측도구/IMG_0540.JPG);
+}
+#business__marenv__temsalt2 {
+  background-image: url(img/business_marenv/temsalt/분석그래프/st1_0100.jpg);
+}
+#business__marenv__temsalt3 {
+  background-image: url(img/business_marenv/temsalt/분석그래프/st1_2200.jpg);
+}
+
+#business__marphysics__buoy1 {
+  background-image: url(img/business_marphysics/buoytrackingobs/2017_12_19_IMG_0251.JPG);
+}
+#business__marphysics__buoy2 {
+  background-image: url(img/business_marphysics/buoytrackingobs/image05.jpg);
+}
+#business__marphysics__buoy3 {
+  background-image: url(img/business_marphysics/buoytrackingobs/IMG_3751.JPG);
+}
+
+#business__marphysics__depthsurveyimage1 {
+  background-image: url(img/business_marphysics/depthsurvey/image06.jpg);
+}
+#business__marphysics__depthsurveyimage2 {
+  background-image: url(img/business_marphysics/depthsurvey/image07.jpg);
+}
+#business__marphysics__depthsurveyimage3 {
+  background-image: url(img/business_marphysics/depthsurvey/image08.jpg);
+}
+
+#business__marphysics__tideobsimage1 {
+  background-image: url(img/business_marphysics/tideobs/image01.jpg);
+}
+#business__marphysics__tideobsimage2 {
+  background-image: url(img/business_marphysics/tideobs/image02.jpg);
+}
+#business__marphysics__tideobsimage3 {
+  background-image: url(img/business_marphysics/tideobs/image03.jpg);
+}
+
+#business__marphysics__tideheightimage1 {
+  background-image: url(img/business_marphysics/tideheightobs/조위관측1.jpeg);
+}
+#business__marphysics__tideheightimage2 {
+  background-image: url(img/business_marphysics/tideheightobs/조위관측2.jpeg);
+}
+#business__marphysics__tideheightimage3 {
+  background-image: url(img/business_marphysics/tideheightobs/image10.jpg);
+}
+
+#business__gis__warning1 {
+  background-image: url(img/business_gis/warning/연안재해경보시스템cctv.png);
+}
+#business__gis__warning2 {
+  background-image: url(img/business_gis/warning/연안재해경보시스템ui.png);
+}
+#business__gis__warning3 {
+  background-image: url(img/business_gis/warning/연안재해경보시스템알림판.png);
+}
+
+#business__gis__builddb1 {
+  background-image: url(img/business_gis/builddb/해양gisdb구축3d.png);
+}
+#business__gis__builddb2 {
+  background-image: url(img/business_gis/builddb/해양gisdb구축모델.png);
+}
+#business__gis__builddb3 {
+  background-image: url(img/business_gis/builddb/해양gisdb구축지도.png);
+}
+
+#business__gis__geosurvey1 {
+  background-image: url(img/business_gis/geosurvey/지형측량모델.png);
+}
+#business__gis__geosurvey2 {
+  background-image: url(img/business_gis/geosurvey/지형측량사진.png);
+}
+#business__gis__geosurvey3 {
+  background-image: url(img/business_gis/geosurvey/지형측량지도.png);
+}
+
+#business__gis__facilitysur1 {
+  background-image: url(img/business_gis/facilitysur/항만연안시설물측량바다.png);
+}
+#business__gis__facilitysur2 {
+  background-image: url(img/business_gis/facilitysur/항만연안시설물측량사진.png);
+}
+#business__gis__facilitysur3 {
+  background-image: url(img/business_gis/facilitysur/항만연안시설물측량지도.png);
+}
+
+/* #business__marphysics__waveobsimage1{
+    background-image: url(img/business_marphysics/waveobs/);
+}
+#business__marphysics__waveobsimage2{
+    background-image: url(img/business_marphysics/waveobs/G);
+}
+#business__marphysics__waveobsimage3{
+    background-image: url(img/business_marphysics/waveobs/);
+} */
+@media all and (min-width: 320px) and (max-width: 728px) {
+  .business-content__textlist {
+    width: 80vw;
+    margin-bottom: 0vh;
+  }
+  .business-content__text {
+    font-size: 0.8rem;
+  }
+  .business-content__item-title {
+    font-size: 1.2rem;
+  }
+  .business-content__item-image {
+    width: 30vw;
+    height: 30vw;
+  }
+}
+
+@media all and (min-width: 728px) and (max-width: 1024px) {
+}
+@media all and (min-width: 1200px) {
+  .main {
+    width: 75vw;
+  }
 }

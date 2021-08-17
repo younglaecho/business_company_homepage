@@ -1,16 +1,30 @@
 .main {
-    width:80vw;
+    width:95vw;
+}
+
+.introduction {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.intro__textbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    width: 65%;
+
 }
 .intro__bigtext {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-bottom: 8vh;
 }
 
 .intro__bigtext-text {
     display: flex;
     justify-content: center;
+    align-items: center;
     width:100%;
     font-size : 2.0rem;
     margin: 0.5rem 0;
@@ -18,18 +32,21 @@
 
 }
 .intro__coloredtext {
-    color: rgb(190, 8, 190);
+    color: #7EA5C4;
 }
 .intro__boldtext {
     display: flex;
     flex-wrap: wrap;
-    width:100%;
+    justify-content: center;
+    width:90%;
+    margin: 0 auto;
     line-height: 2.3rem;
-    margin-bottom: 2vh;
+    margin-bottom: 1vh;
 }
 
 .intro__boldtext-text {
     display: flex;
+    width:100%;
     font-size: 1.3rem;
     line-height: 2.5rem;
     font-weight: 900;
@@ -37,19 +54,62 @@
 
 .intro__smalltext {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    width:90%;
+    height: 50%;
+    margin: 0 auto;
     line-height: 2.3rem;
     font-size: 1.3rem;
     font-weight: 100;
-    margin-bottom: 3vh;
+    margin-bottom: 2vh;
 
 }
 .intro__smalltext-text {
     display: flex;
+    width:100%;
     font-size: 1.3rem;
     line-height: 2.5rem;
 }
+
+.intro__imagebox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+}
+
+.intro__image {
+    width: 100%;
+    max-width: 50vw;
+    border-radius: 10px;
+}
+
+
 .intro__outro {
     display: flex;
     justify-content: flex-end;
+    margin-left: 3%;
     font-size: 1.1rem;
+}
+
+@media all and (min-width:320px) and (max-width:728px) {
+    .intro__bigtext-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width:100%;
+        font-size : 1.5rem;
+        margin: 0.5rem 0;
+        font-weight: 900;
+    
+    }
+    .intro__textbox {
+        width:100%
+    }
+    
+    .intro__imagebox {
+        display: none;
+    }
+    
 }

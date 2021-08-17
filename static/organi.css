@@ -1,0 +1,17 @@
+.organi__image__text {
+    margin-bottom: 3vh;
+    padding-left: 5vw;
+    font-size: 1.5rem;
+    color: #808080;
+}
+
+.organipage__image {
+
+    width:80%
+}
+.organi__imagebox {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10vh;
+
+}

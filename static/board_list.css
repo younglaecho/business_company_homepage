@@ -1,61 +1,89 @@
 ul {
-    list-style-type: none;
-
+  list-style-type: none;
 }
 
-
 .board_list {
-    list-style-type: none;
+  list-style-type: none;
 
-    display:flex;
-    flex-wrap: wrap;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
 }
 
 .board_list-col {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    height: 40px;
-    width: 100%;
-    border-bottom:1px solid lightslategray;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  height: 40px;
+  width: 100%;
+  border-bottom: 1px solid lightslategray;
 }
 
 .board_list-col-onclick {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .board_list-title {
-    background-color: rgba(211, 211, 211, 0.253);
+  background-color: rgba(211, 211, 211, 0.253);
 }
 .board_item-properties {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    height: 100%;
-    padding: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  padding: 0;
 }
 .board_item-property {
-    /* width: 25%; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+  /* width: 25%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .board_item-property-number {
-    width: 10%;
+  width: 10%;
 }
 .board_item-property-title {
-    width: 40%;
+  width: 40%;
 }
 .board_item-property-writer {
-    width: 10%;
+  width: 10%;
 }
 .board_item-property-dttm {
-    width: 30%;
+  width: 30%;
 }
 .board_item-property-hits {
-    width: 10%;
+  width: 10%;
+}
+
+.page-numbering-box {
+  display: flex;
+  justify-content: center;
+}
+.pagination {
+  margin-top: 3vh;
+}
+.page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid 1px lightgray;
+  /* background-color: black; */
+  width: 30px;
+  height: 30px;
+}
+
+.current-page {
+  background-color: gray;
+  color: white;
+}
+.blank-page {
+  border: none;
+}
+
+@media all and (min-width: 320px) and (max-width: 728px) {
+  .board_list-col {
+    font-size: 0.7rem;
+  }
 }

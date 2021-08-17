@@ -12,12 +12,26 @@ class NoticeList(ListView):
     model = Noticeboard
     template_name = 'notice.html'
     context_object_name = 'post_list'
-    paginate_by = 10
+    paginate_by = 5
+
+    def get_context_data(self, **kwargs):
+        context = super(NoticeList, self).get_context_data(**kwargs)
+        page_list = range(-2, 3, 1)
+        context['page_list'] = list(page_list)
+        return context
+
 
 class ReferenceList(ListView):
     model = Referenceboard
     template_name = 'reference.html'
     context_object_name = 'post_list'
+
+    def get_context_data(self, **kwargs):
+        context = super(ReferenceList, self).get_context_data(**kwargs)
+        page_list = range(-2, 3, 1)
+        context['page_list'] = list(page_list)
+        return context
+
 
 class NoticeboardDetail(DetailView):
     template_name = "notice_board_detail.html"
@@ -37,7 +51,6 @@ class NoticeboardDetail(DetailView):
     #     else:
     #         form=CommentForm()
     #     return render(request, 'notice_board_detail.html', {'form':form})
-
 
 
 class ReferenceboardDetail(DetailView):

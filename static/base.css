@@ -162,6 +162,7 @@ hr {
     transform: translateY(+20px);
     opacity: 1;
 }
+
 .fiexed-nav__submenu {
     visibility: hidden;
     opacity: 0;
@@ -187,8 +188,6 @@ hr {
     width: 100%;
     font-size: 12px;
     cursor: pointer;
-
-    
 }
 .fiexed-nav__submenu__item:hover {
     color: rgb(173, 173, 173);
@@ -313,6 +312,16 @@ hr {
         font-size: 1.5vh;
     }
 
+    .fixed-nav__items__item:hover .fiexed-nav__submenu{
+        visibility:visible;
+        transform: translateY(+20px);
+        opacity: 1;
+    }
+
+    .fiexed-nav__submenu {
+        transition:unset;
+    }
+    
     .main__slide-area_base {
         top: 8vh;
         height: 36vh;
