@@ -219,8 +219,8 @@
 .main__middle-image {
     height: 75vh;
     width: calc(100vw-(100vw - 100%));
-    background-image: url(img/wind.jpg);
-        background-size: cover;
+    /* background-image: url(img/wind.jpg); */
+    background-size: cover;
 
 }
 .main__map {

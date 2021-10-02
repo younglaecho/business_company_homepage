@@ -93,49 +93,12 @@
   border: none;
   background-size: contain;
   background-repeat: no-repeat;
+  object-fit:contain;
   background-position-x: center;
   background-position-y: center;
 }
 
-#business__coast__stormimage1 {
-  background-image: url(img/business_coast/stormsurge/폭풍해일1.jpeg);
-}
-#business__coast__stormimage2 {
-  background-image: url(img/business_coast/stormsurge/stormsurge_storm.jpg);
-}
-#business__coast__stormimage3 {
-  background-image: url(img/business_coast/stormsurge/stormsurge.png);
-}
 
-#business__coast__earthquake1 {
-  background-image: url(img/business_coast/earthquake/tsunami_earthquake.jpg);
-}
-#business__coast__earthquake2 {
-  background-image: url(img/business_coast/earthquake/tsunami_image.jpg);
-}
-#business__coast__earthquake3 {
-  background-image: url(img/business_coast/earthquake/z_01_009000.jpg);
-}
-
-#business__coast__coastimage1 {
-  background-image: url("img/business_coast/shoreline/case8.jpg");
-}
-#business__coast__coastimage2 {
-  background-image: url(img/business_coast/shoreline/shoreline_image1.JPG);
-}
-#business__coast__coastimage3 {
-  background-image: url(img/business_coast/shoreline/shoreline_image2.JPG);
-}
-
-#business__coast__onbaesuimage1 {
-  background-image: url(img/business_coast/diffusion/diffusion_image1.jpg);
-}
-#business__coast__onbaesuimage2 {
-  background-image: url(img/business_coast/diffusion/diffusion_image2.jpg);
-}
-#business__coast__onbaesuimage3 {
-  background-image: url("img/business_coast/diffusion/diffusion_image3.png");
-}
 
 #business__coast__sedmove1 {
   background-image: url(img/business_harbor/sedmove/sedmove1.jpg);
@@ -267,15 +230,7 @@
   background-image: url(img/business_gis/geosurvey/지형측량지도.png);
 }
 
-#business__gis__facilitysur1 {
-  background-image: url(img/business_gis/facilitysur/항만연안시설물측량바다.png);
-}
-#business__gis__facilitysur2 {
-  background-image: url(img/business_gis/facilitysur/항만연안시설물측량사진.png);
-}
-#business__gis__facilitysur3 {
-  background-image: url(img/business_gis/facilitysur/항만연안시설물측량지도.png);
-}
+
 
 /* #business__marphysics__waveobsimage1{
     background-image: url(img/business_marphysics/waveobs/);
