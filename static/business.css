@@ -1,20 +1,6 @@
 .template_section {
   height: auto;
 }
-/* .business-title {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    width: 20vw;
-    height: 8vh;
-    max-width: 250px;
-    max-height: 80px;
-    padding-right: 4vw;
-    font-size: 1.5rem;
-    -webkit-box-shadow: 5px 5px 8px 2px rgba(0,0,0,0.43);
-    -moz-box-shadow: 5px 5px 8px 2px rgba(0,0,0,0.43);
-    box-shadow: 5px 5px 8px 2px rgba(0,0,0,0.43);
-} */
 
 .main {
   padding: 2vh 5vw;
@@ -88,6 +74,7 @@
 
 .business-content__item-image {
   width: 100%;
+  max-width: 20vw;
   height: 80%;
   margin-top: 1vh;
   border: none;
@@ -97,150 +84,6 @@
   background-position-x: center;
   background-position-y: center;
 }
-
-
-
-#business__coast__sedmove1 {
-  background-image: url(img/business_harbor/sedmove/sedmove1.jpg);
-}
-#business__coast__sedmove2 {
-  background-image: url(img/business_harbor/sedmove/sedmove2.jpg);
-}
-#business__coast__sedmove3 {
-  background-image: url("img/business_harbor/sedmove/퇴적물이동실험_그림.jpg");
-}
-
-#business__coast__wavedefor1 {
-  background-image: url(img/business_harbor/wavedefor/50yr_SW_L01_post_CN.jpg);
-}
-#business__coast__wavedefor2 {
-  background-image: url(img/business_harbor/wavedefor/50yr_SW_L01_vector_CN.jpg);
-}
-#business__coast__wavedefor3 {
-  background-image: url("img/business_harbor/wavedefor/L01_Bathymetry_200407.jpg");
-}
-
-#business__coast__harbortemp1 {
-  background-image: url("img/business_harbor/harbortemp/항내정온도_1.jpg");
-}
-#business__coast__harbortemp2 {
-  background-image: url(img/business_harbor/harbortemp/항내정온도_2.jpg);
-}
-#business__coast__harbortemp3 {
-  background-image: url("img/business_harbor/harbortemp/항내정온도_3.jpg");
-}
-
-#business__coast__harbormove1 {
-  background-image: url("img/business_harbor/harbormove/flow_ebb_Run-f3_post.jpg");
-}
-#business__coast__harbormove2 {
-  background-image: url(img/business_harbor/harbormove/해수유동실험_그림2.jpg);
-}
-#business__coast__harbormove3 {
-  background-image: url("img/business_harbor/harbormove/해수유동실험_그림.jpg");
-}
-
-#business__marenv__seasedment1 {
-  background-image: url(img/business_marenv/seasedment/DSC00277.JPG);
-}
-#business__marenv__seasedment2 {
-  background-image: url(img/business_marenv/seasedment/IMG_1532.JPG);
-}
-#business__marenv__seasedment3 {
-  background-image: url(img/business_marenv/seasedment/image16.jpg);
-}
-
-#business__marenv__temsalt1 {
-  background-image: url(img/business_marenv/temsalt/관측도구/IMG_0540.JPG);
-}
-#business__marenv__temsalt2 {
-  background-image: url(img/business_marenv/temsalt/분석그래프/st1_0100.jpg);
-}
-#business__marenv__temsalt3 {
-  background-image: url(img/business_marenv/temsalt/분석그래프/st1_2200.jpg);
-}
-
-#business__marphysics__buoy1 {
-  background-image: url(img/business_marphysics/buoytrackingobs/2017_12_19_IMG_0251.JPG);
-}
-#business__marphysics__buoy2 {
-  background-image: url(img/business_marphysics/buoytrackingobs/image05.jpg);
-}
-#business__marphysics__buoy3 {
-  background-image: url(img/business_marphysics/buoytrackingobs/IMG_3751.JPG);
-}
-
-#business__marphysics__depthsurveyimage1 {
-  background-image: url(img/business_marphysics/depthsurvey/image06.jpg);
-}
-#business__marphysics__depthsurveyimage2 {
-  background-image: url(img/business_marphysics/depthsurvey/image07.jpg);
-}
-#business__marphysics__depthsurveyimage3 {
-  background-image: url(img/business_marphysics/depthsurvey/image08.jpg);
-}
-
-#business__marphysics__tideobsimage1 {
-  background-image: url(img/business_marphysics/tideobs/image01.jpg);
-}
-#business__marphysics__tideobsimage2 {
-  background-image: url(img/business_marphysics/tideobs/image02.jpg);
-}
-#business__marphysics__tideobsimage3 {
-  background-image: url(img/business_marphysics/tideobs/image03.jpg);
-}
-
-#business__marphysics__tideheightimage1 {
-  background-image: url(img/business_marphysics/tideheightobs/조위관측1.jpeg);
-}
-#business__marphysics__tideheightimage2 {
-  background-image: url(img/business_marphysics/tideheightobs/조위관측2.jpeg);
-}
-#business__marphysics__tideheightimage3 {
-  background-image: url(img/business_marphysics/tideheightobs/image10.jpg);
-}
-
-#business__gis__warning1 {
-  background-image: url(img/business_gis/warning/연안재해경보시스템cctv.png);
-}
-#business__gis__warning2 {
-  background-image: url(img/business_gis/warning/연안재해경보시스템ui.png);
-}
-#business__gis__warning3 {
-  background-image: url(img/business_gis/warning/연안재해경보시스템알림판.png);
-}
-
-#business__gis__builddb1 {
-  background-image: url(img/business_gis/builddb/해양gisdb구축3d.png);
-}
-#business__gis__builddb2 {
-  background-image: url(img/business_gis/builddb/해양gisdb구축모델.png);
-}
-#business__gis__builddb3 {
-  background-image: url(img/business_gis/builddb/해양gisdb구축지도.png);
-}
-
-#business__gis__geosurvey1 {
-  background-image: url(img/business_gis/geosurvey/지형측량모델.png);
-}
-#business__gis__geosurvey2 {
-  background-image: url(img/business_gis/geosurvey/지형측량사진.png);
-}
-#business__gis__geosurvey3 {
-  background-image: url(img/business_gis/geosurvey/지형측량지도.png);
-}
-
-
-
-/* #business__marphysics__waveobsimage1{
-    background-image: url(img/business_marphysics/waveobs/);
-}
-#business__marphysics__waveobsimage2{
-    background-image: url(img/business_marphysics/waveobs/G);
-}
-#business__marphysics__waveobsimage3{
-    background-image: url(img/business_marphysics/waveobs/);
-} */
 @media all and (min-width: 320px) and (max-width: 728px) {
   .business-content__textlist {
     width: 80vw;
